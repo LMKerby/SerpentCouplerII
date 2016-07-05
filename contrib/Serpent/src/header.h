@@ -2378,52 +2378,55 @@ double GetPrivateRes(long);
 /*****************************************************************************/
 
 /* Arrays */
+/* Added extern to compile on Mac, LMK 6/2016 */
 
-double *ACE;
-double *WDB;
-double *PRIVA;
-double *BUF;
-double *RES1;
-double *RES2;
+extern double *ACE;
+extern double *WDB;
+extern double *PRIVA;
+extern double *BUF;
+extern double *RES1;
+extern double *RES2;
 
-const double *RDB;
+extern const double *RDB;
 
-char *ASCII;
+extern char *ASCII;
 
 /* This size must be larger than cache line width */
 
 #define RNG_SZ 100
 
-unsigned long *SEED;
-unsigned long *SEED0;
+extern unsigned long *SEED;
+extern unsigned long *SEED0;
 
 /*****************************************************************************/
 
 /* Output pointers */
 
-FILE *err;
-FILE *out;
+extern FILE *err;
+extern FILE *out;
 
 /* Number of mpi tasks and id */
 
-int mpitasks;
-int mpiid;
+extern int mpitasks;
+extern int mpiid;
 
 /* Random number seed */
 
-unsigned long parent_seed;
+extern unsigned long parent_seed;
 
 /* Collision counter */
 
 /* Timers */
-/* Added 'static' to avoid anonymous type error, Leslie Kerby, 5/2016 */
-struct {
+/* Added tag for struct, LMK 6/2016 */
+struct Timer {
   double t0;
   double t;
   double cpu_t0;
   double cpu_t;
   int on;
-} timer[TOT_TIMERS + 1];
+};
+
+extern struct Timer timer[TOT_TIMERS + 1];
 
 /*****************************************************************************/
 #ifdef __cplusplus
