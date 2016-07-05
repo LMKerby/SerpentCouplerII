@@ -1,0 +1,338 @@
+/*****************************************************************************/
+/*                                                                           */
+/* serpent 2 (beta-version) : poisoneq.c                                     */
+/*                                                                           */
+/* Created:       2012/12/04 (JLe)                                           */
+/* Last modified: 2015/05/30 (JLe)                                           */
+/* Version:       2.1.24                                                     */
+/*                                                                           */
+/* Description: Calculates equilibrium concentrations for Xe-135 and Sm-149  */
+/*                                                                           */
+/* Comments: - Tähän vois nyt ottaa I-135 ja Pm-149 kaappauksen mukaan       */
+/*                                                                           */
+/*****************************************************************************/
+
+#include "header.h"
+#include "locations.h"
+
+#define FUNCTION_NAME "PoisonEq:"
+
+/*****************************************************************************/
+
+void PoisonEq()
+{
+  long mat, ptr, iso;
+  double norm, sum1, sum2, sum3, dir, prec, abs, val, div, vol, old;
+  
+  /* Check modes */
+
+  if (((long)RDB[DATA_XENON_EQUILIBRIUM_MODE] < 0) &&
+      ((long)RDB[DATA_SAMARIUM_EQUILIBRIUM_MODE] < 0))
+    return;
+
+  /* Reduce scoring buffer */
+
+  ReduceBuffer();
+
+  /* Get normalization factor */
+
+  norm = NormCoef(PARTICLE_TYPE_NEUTRON);
+  CheckValue(FUNCTION_NAME, "norm", "", norm, 0.0, INFTY);
+
+  /* Reset maximum pointers */
+
+  WDB[DATA_MAX_XENON_PTR_MAT] = -1.0;
+  WDB[DATA_MAX_SAMARIUM_PTR_MAT] = -1.0;
+
+  /***************************************************************************/
+
+  /***** Equilibrium xenon ***************************************************/
+
+  if ((long)RDB[DATA_XENON_EQUILIBRIUM_MODE] > -1)
+    {
+      /* Reset sums and divider */
+
+      sum1 = 0.0;
+      sum2 = 0.0;
+      sum3 = 0.0;
+      div = 0.0;
+
+      /* Loop over materials */
+
+      mat = (long)RDB[DATA_PTR_M0];
+      while (mat > VALID_PTR)
+	{
+	  /* Check equilibrium flag and division */
+
+	  if (((long)RDB[mat + MATERIAL_XENON_EQUIL_CALC] == NO) ||
+	      ((long)RDB[mat + MATERIAL_DIV_TYPE] == MAT_DIV_TYPE_PARENT) ||
+	      (!((long)RDB[mat + MATERIAL_OPTIONS] & OPT_PHYSICAL_MAT)))
+	    {
+	      /* Next material */
+
+	      mat = NextItem(mat);
+
+	      /* Cycle loop */
+
+	      continue;
+	    }
+
+	  /* Get volume */
+
+	  if ((vol = RDB[mat + MATERIAL_VOLUME]) < ZERO)
+	    Error(0, "Volume of material %s must be given", 
+		  GetText(mat + MATERIAL_PTR_NAME));
+
+	  /* Pointer to composition */
+
+	  iso = (long)RDB[mat + MATERIAL_PTR_XE135_ISO];
+	  CheckPointer(FUNCTION_NAME, "(iso)", DATA_ARRAY, iso);
+
+	  /* Get production rates */
+	      
+	  ptr = (long)RDB[mat + MATERIAL_PTR_XE135_PROD_RATE];
+	  CheckPointer(FUNCTION_NAME, "(ptr)", DATA_ARRAY, ptr);
+	  dir = norm*BufVal(ptr, 0)/vol;
+
+	  ptr = (long)RDB[mat + MATERIAL_PTR_I135_PROD_RATE];
+	  CheckPointer(FUNCTION_NAME, "(ptr)", DATA_ARRAY, ptr);
+	  prec = norm*BufVal(ptr, 0)/vol;
+
+	  /* Absorption rate */
+	  
+	  ptr = (long)RDB[mat + MATERIAL_PTR_XE135_ABS_RATE];
+	  CheckPointer(FUNCTION_NAME, "(ptr)", DATA_ARRAY, ptr);
+	  abs = BARN*norm*BufVal(ptr, 0)/vol;
+	      
+	  /* Add to total absorption */
+	      
+	  sum1 = sum1 + norm*BufVal(ptr, 0);
+
+	  /* Equilibrium I-135 concentration */
+	  
+	  val = BARN*prec/RDB[DATA_I135_DC];
+
+	  ptr = (long)RDB[mat + MATERIAL_PTR_I135_CONC];
+	  CheckPointer(FUNCTION_NAME, "(ptr)", DATA_ARRAY, ptr);
+	  AddStat(val, ptr, 0);
+
+	  sum2 = sum2 + val*vol;
+
+	  /* Equilibrium Xe-135 concentration */
+
+	  val = BARN*(dir + prec)/(abs + RDB[DATA_XE135_DC]);
+
+	  ptr = (long)RDB[mat + MATERIAL_PTR_XE135_CONC];
+	  CheckPointer(FUNCTION_NAME, "(ptr)", DATA_ARRAY, ptr);
+	  AddStat(val, ptr, 0);
+
+	  sum3 = sum3 + val*vol;
+
+	  /* Get old concentration */
+	  
+	  old = RDB[iso + COMPOSITION_ADENS];
+
+	  /* Set new concentration */
+
+	  WDB[iso + COMPOSITION_ADENS] = val;
+
+	  /* Adjust atomic density */
+
+	  WDB[mat + MATERIAL_ADENS] = RDB[mat + MATERIAL_ADENS] - old + val;
+
+	  /* Compare to maximum */
+
+	  if ((ptr = (long)RDB[DATA_MAX_XENON_PTR_MAT]) < VALID_PTR)
+	    WDB[DATA_MAX_XENON_PTR_MAT] = (double)mat;
+	  else
+	    {
+	      /* Pointer to composition */
+
+	      iso = (long)RDB[ptr + MATERIAL_PTR_XE135_ISO];
+	      CheckPointer(FUNCTION_NAME, "(iso)", DATA_ARRAY, iso);
+ 
+	      /* Compare */
+	      
+	      if (val > RDB[iso + COMPOSITION_ADENS])
+		WDB[DATA_MAX_XENON_PTR_MAT] = (double)mat;
+	    }
+
+	  /* Add to total volume */
+	      
+	  div = div + vol;
+	  
+	  /* Next material */
+
+	  mat = NextItem(mat);
+	}
+
+      /* Check divisor */
+
+      CheckValue(FUNCTION_NAME, "div", "", div, ZERO, INFTY);
+  
+      /* Total I-135 and Xe-135 concentrations */
+
+      ptr = (long)RDB[RES_I135_EQUIL_CONC];
+      CheckPointer(FUNCTION_NAME, "(ptr)", DATA_ARRAY, ptr);
+      AddStat(sum2/div, ptr, 0);
+
+      ptr = (long)RDB[RES_XE135_EQUIL_CONC];
+      CheckPointer(FUNCTION_NAME, "(ptr)", DATA_ARRAY, ptr);
+      AddStat(sum3/div, ptr, 0);
+
+      /* Total Xe-135 absorption rate */
+      
+      ptr = (long)RDB[RES_XE135_ABSRATE];
+      CheckPointer(FUNCTION_NAME, "(ptr)", DATA_ARRAY, ptr);
+      AddStat(sum1, ptr, 0);
+    }
+
+  /***************************************************************************/
+
+  /***** Equilibrium samarium ************************************************/
+
+  if ((long)RDB[DATA_SAMARIUM_EQUILIBRIUM_MODE] > -1)
+    {
+      /* Reset sums and divider */
+
+      sum1 = 0.0;
+      sum2 = 0.0;
+      sum3 = 0.0;
+      div = 0.0;
+
+      /* Loop over materials */
+
+      mat = (long)RDB[DATA_PTR_M0];
+      while (mat > VALID_PTR)
+	{
+	  /* Check equilibrium flag and division */
+	  
+	  if (((long)RDB[mat + MATERIAL_SAMARIUM_EQUIL_CALC] == NO) ||
+	      ((long)RDB[mat + MATERIAL_DIV_TYPE] == MAT_DIV_TYPE_PARENT))
+	    {
+	      /* Next material */
+
+	      mat = NextItem(mat);
+
+	      /* Cycle loop */
+
+	      continue;
+	    }
+
+	  /* Get volume */
+
+	  if ((vol = RDB[mat + MATERIAL_VOLUME]) < ZERO)
+	    Error(0, "Volume of material %s must be given", 
+		  GetText(mat + MATERIAL_PTR_NAME));
+
+	  /* Pointer to composition */
+
+	  iso = (long)RDB[mat + MATERIAL_PTR_SM149_ISO];
+	  CheckPointer(FUNCTION_NAME, "(iso)", DATA_ARRAY, iso);
+
+	  /* Get production rates */
+	      
+	  ptr = (long)RDB[mat + MATERIAL_PTR_SM149_PROD_RATE];
+	  CheckPointer(FUNCTION_NAME, "(ptr)", DATA_ARRAY, ptr);
+	  dir = norm*BufVal(ptr, 0)/vol;
+
+	  ptr = (long)RDB[mat + MATERIAL_PTR_PM149_PROD_RATE];
+	  CheckPointer(FUNCTION_NAME, "(ptr)", DATA_ARRAY, ptr);
+	  prec = norm*BufVal(ptr, 0)/vol;
+
+	  /* Absorption rate */
+	  
+	  ptr = (long)RDB[mat + MATERIAL_PTR_SM149_ABS_RATE];
+	  CheckPointer(FUNCTION_NAME, "(ptr)", DATA_ARRAY, ptr);
+	  abs = BARN*norm*BufVal(ptr, 0)/vol;
+	      
+	  /* Add to total absorption */
+	      
+	  sum1 = sum1 + norm*BufVal(ptr, 0);
+
+	  /* Equilibrium Pm-149 concentration */
+	  
+	  val = BARN*prec/RDB[DATA_PM149_DC];
+
+	  ptr = (long)RDB[mat + MATERIAL_PTR_PM149_CONC];
+	  CheckPointer(FUNCTION_NAME, "(ptr)", DATA_ARRAY, ptr);
+	  AddStat(val, ptr, 0);
+
+	  sum2 = sum2 + val*vol;
+
+	  /* Equilibrium Sm-149 concentration */
+
+	  if (abs > 0.0)
+	    val = BARN*(dir + prec)/abs;
+	  else
+	    val = 0.0;
+
+	  ptr = (long)RDB[mat + MATERIAL_PTR_SM149_CONC];
+	  CheckPointer(FUNCTION_NAME, "(ptr)", DATA_ARRAY, ptr);
+	  AddStat(val, ptr, 0);
+
+	  sum3 = sum3 + val*vol;
+
+	  /* Get old concentration */
+	  
+	  old = RDB[iso + COMPOSITION_ADENS];
+
+	  /* Set new concentration */
+
+	  WDB[iso + COMPOSITION_ADENS] = val;
+
+	  /* Adjust atomic density */
+
+	  WDB[mat + MATERIAL_ADENS] = RDB[mat + MATERIAL_ADENS] - old + val;
+
+	  /* Compare to maximum */
+
+	  if ((ptr = (long)RDB[DATA_MAX_SAMARIUM_PTR_MAT]) < VALID_PTR)
+	    WDB[DATA_MAX_SAMARIUM_PTR_MAT] = (double)mat;
+	  else
+	    {
+	      /* Pointer to composition */
+
+	      iso = (long)RDB[ptr + MATERIAL_PTR_SM149_ISO];
+	      CheckPointer(FUNCTION_NAME, "(iso)", DATA_ARRAY, iso);
+ 
+	      /* Compare */
+	      
+	      if (val > RDB[iso + COMPOSITION_ADENS])
+		WDB[DATA_MAX_SAMARIUM_PTR_MAT] = (double)mat;
+	    }
+
+	  /* Add to total volume */
+	      
+	  div = div + vol;
+	  
+	  /* Next material */
+
+	  mat = NextItem(mat);
+	}
+
+      /* Check divisor */
+
+      CheckValue(FUNCTION_NAME, "div", "", div, ZERO, INFTY);
+  
+      /* Total Pm-149 and Sm-149 concentrations */
+
+      ptr = (long)RDB[RES_PM149_EQUIL_CONC];
+      CheckPointer(FUNCTION_NAME, "(ptr)", DATA_ARRAY, ptr);
+      AddStat(sum2/div, ptr, 0);
+
+      ptr = (long)RDB[RES_SM149_EQUIL_CONC];
+      CheckPointer(FUNCTION_NAME, "(ptr)", DATA_ARRAY, ptr);
+      AddStat(sum3/div, ptr, 0);
+
+      /* Total Sm-149 absorption rate */
+      
+      ptr = (long)RDB[RES_SM149_ABSRATE];
+      CheckPointer(FUNCTION_NAME, "(ptr)", DATA_ARRAY, ptr);
+      AddStat(sum1, ptr, 0);
+    }
+
+  /***************************************************************************/
+}
+
+/*****************************************************************************/

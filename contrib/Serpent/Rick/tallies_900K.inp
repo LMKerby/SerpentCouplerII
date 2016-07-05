@@ -1,0 +1,291 @@
+% -- Tallies
+% -----------------------------------------------------------------------------          
+%   set up detectors
+%   detector volume is unity
+% -----------------------------------------------------------------------------
+% energy grid for spectra
+ene spectrum 1 1.000E-11  2.500E-09  4.556E-09  7.145E-09  1.045E-08  1.483E-08  2.001E-08  2.494E-08  2.930E-08  3.440E-08
+           4.030E-08  4.730E-08  5.550E-08  6.520E-08  7.650E-08  8.980E-08  1.043E-07  1.200E-07  1.380E-07  1.619E-07
+           1.900E-07  2.096E-07  2.312E-07  2.550E-07  2.800E-07  3.050E-07  3.250E-07  3.530E-07  3.900E-07  4.316E-07
+           4.750E-07  5.200E-07  5.550E-07  5.950E-07  6.250E-07  7.200E-07  8.200E-07  8.800E-07  9.200E-07  9.440E-07
+           9.640E-07  9.820E-07  9.965E-07  1.009E-06  1.021E-06  1.035E-06  1.078E-06  1.092E-06  1.104E-06  1.116E-06
+           1.130E-06  1.148E-06  1.170E-06  1.214E-06  1.251E-06  1.293E-06  1.331E-06  1.381E-06  1.410E-06  1.444E-06
+           1.520E-06  1.588E-06  1.669E-06  1.780E-06  1.900E-06  1.990E-06  2.070E-06  2.157E-06  2.217E-06  2.273E-06
+           2.330E-06  2.470E-06  2.550E-06  2.590E-06  2.620E-06  2.640E-06  2.700E-06  2.720E-06  2.741E-06  2.775E-06
+           2.884E-06  3.142E-06  3.543E-06  3.712E-06  3.882E-06  4.000E-06  4.220E-06  4.310E-06  4.402E-06  4.633E-06
+           4.959E-06  5.318E-06  5.619E-06  5.919E-06  6.228E-06  6.508E-06  6.828E-06  7.215E-06  7.622E-06  7.965E-06
+           8.416E-06  8.856E-06  9.310E-06  9.787E-06  1.024E-05  1.071E-05  1.120E-05  1.174E-05  1.223E-05  1.289E-05
+           1.357E-05  1.421E-05  1.497E-05  1.574E-05  1.656E-05  1.738E-05  1.830E-05  1.903E-05  2.011E-05  2.053E-05
+           2.122E-05  2.200E-05  2.267E-05  2.466E-05  2.789E-05  3.169E-05  3.309E-05  3.454E-05  3.570E-05  3.606E-05
+           3.642E-05  3.686E-05  3.730E-05  3.779E-05  3.879E-05  3.973E-05  4.123E-05  4.214E-05  4.313E-05  4.417E-05
+           4.529E-05  4.621E-05  4.752E-05  4.926E-05  5.179E-05  5.299E-05  5.406E-05  5.706E-05  5.993E-05  6.231E-05
+           6.363E-05  6.459E-05  6.505E-05  6.550E-05  6.583E-05  6.616E-05  6.649E-05  6.683E-05  6.907E-05  7.189E-05
+           7.356E-05  7.633E-05  7.937E-05  8.394E-05  8.877E-05  9.333E-05  9.733E-05  1.006E-04  1.011E-04  1.016E-04
+           1.021E-04  1.030E-04  1.057E-04  1.103E-04  1.129E-04  1.155E-04  1.165E-04  1.176E-04  1.206E-04  1.262E-04
+           1.327E-04  1.395E-04  1.467E-04  1.542E-04  1.631E-04  1.675E-04  1.752E-04  1.833E-04  1.850E-04  1.863E-04
+           1.876E-04  1.889E-04  1.902E-04  1.931E-04  1.960E-04  2.010E-04  2.121E-04  2.243E-04  2.356E-04  2.418E-04
+           2.568E-04  2.683E-04  2.765E-04  2.849E-04  2.883E-04  2.959E-04  3.199E-04  3.353E-04  3.536E-04  3.717E-04
+           3.908E-04  4.191E-04  4.540E-04  5.018E-04  5.392E-04  5.772E-04  5.929E-04  6.001E-04  6.128E-04  6.468E-04
+           6.773E-04  7.485E-04  8.322E-04  9.097E-04  9.825E-04  1.064E-03  1.135E-03  1.344E-03  1.586E-03  1.812E-03
+           2.084E-03  2.397E-03  2.700E-03  2.996E-03  3.481E-03  4.097E-03  5.005E-03  6.113E-03  7.466E-03  9.119E-03
+           1.114E-02  1.360E-02  1.490E-02  1.620E-02  1.859E-02  2.270E-02  2.500E-02  2.610E-02  2.739E-02  2.928E-02
+           3.346E-02  3.698E-02  4.087E-02  4.992E-02  5.517E-02  6.738E-02  8.230E-02  9.466E-02  1.156E-01  1.228E-01
+           1.401E-01  1.651E-01  1.951E-01  2.301E-01  2.678E-01  3.207E-01  3.839E-01  4.125E-01  4.560E-01  4.940E-01
+           5.784E-01  7.065E-01  8.600E-01  9.511E-01  1.051E+00  1.162E+00  1.287E+00  1.337E+00  1.406E+00  1.637E+00
+           1.901E+00  2.231E+00  2.725E+00  3.329E+00  4.066E+00  4.966E+00  6.065E+00  6.703E+00  7.408E+00  8.187E+00
+           9.048E+00  1.000E+01  1.162E+01  1.384E+01  1.492E+01  2.00E+01
+
+% detectors 1-20
+% total fission energy deposition
+det 1 du 1 dm UO2_1_900K dr -8 void
+det 2 du 2 dm UO2_2_900K dr -8 void
+det 3 du 3 dm UO2_3_900K dr -8 void
+det 4 du 4 dm UO2_4_900K dr -8 void
+det 5 du 5 dm UO2_5_900K dr -8 void
+det 6 du 6 dm UO2_6_900K dr -8 void
+det 7 du 7 dm UO2_7_900K dr -8 void
+det 8 du 8 dm UO2_8_900K dr -8 void
+det 9 du 9 dm UO2_9_900K dr -8 void
+det 10 du 10 dm UO2_10_900K dr -8 void
+det 11 du 11 dm UO2_11_900K dr -8 void
+det 12 du 12 dm UO2_12_900K dr -8 void
+det 13 du 13 dm UO2_13_900K dr -8 void
+det 14 du 14 dm UO2_14_900K dr -8 void
+det 15 du 15 dm UO2_15_900K dr -8 void
+det 16 du 16 dm UO2_16_900K dr -8 void
+det 17 du 17 dm UO2_17_900K dr -8 void
+det 18 du 18 dm UO2_18_900K dr -8 void
+det 19 du 19 dm UO2_19_900K dr -8 void
+det 20 du 20 dm UO2_20_900K dr -8 void
+
+% detectors 101-120
+%  flux in fuel rings
+% det 101 du 1 dm UO2_1_900K de spectrum 
+% det 102 du 2 dm UO2_2_900K de spectrum 
+% det 103 du 3 dm UO2_3_900K de spectrum 
+% det 104 du 4 dm UO2_4_900K de spectrum 
+% det 105 du 5 dm UO2_5_900K de spectrum 
+% det 106 du 6 dm UO2_6_900K de spectrum 
+% det 107 du 7 dm UO2_7_900K de spectrum 
+% det 108 du 8 dm UO2_8_900K de spectrum 
+% det 109 du 9 dm UO2_9_900K de spectrum 
+% det 110 du 10 dm UO2_10_900K de spectrum 
+% det 111 du 11 dm UO2_11_900K de spectrum 
+% det 112 du 12 dm UO2_12_900K de spectrum 
+% det 113 du 13 dm UO2_13_900K de spectrum 
+% det 114 du 14 dm UO2_14_900K de spectrum 
+% det 115 du 15 dm UO2_15_900K de spectrum 
+% det 116 du 16 dm UO2_16_900K de spectrum 
+% det 117 du 17 dm UO2_17_900K de spectrum 
+% det 118 du 18 dm UO2_18_900K de spectrum 
+% det 119 du 19 dm UO2_19_900K de spectrum 
+% det 120 du 20 dm UO2_20_900K de spectrum 
+
+% detectors 201-220
+%  Total capture
+% det 201 du 1 dm UO2_1_900K dr -2 void
+% det 202 du 2 dm UO2_2_900K dr -2 void
+% det 203 du 3 dm UO2_3_900K dr -2 void
+% det 204 du 4 dm UO2_4_900K dr -2 void
+% det 205 du 5 dm UO2_5_900K dr -2 void
+% det 206 du 6 dm UO2_6_900K dr -2 void
+% det 207 du 7 dm UO2_7_900K dr -2 void
+% det 208 du 8 dm UO2_8_900K dr -2 void
+% det 209 du 9 dm UO2_9_900K dr -2 void
+% det 210 du 10 dm UO2_10_900K dr -2 void
+% det 211 du 11 dm UO2_11_900K dr -2 void
+% det 212 du 12 dm UO2_12_900K dr -2 void
+% det 213 du 13 dm UO2_13_900K dr -2 void
+% det 214 du 14 dm UO2_14_900K dr -2 void
+% det 215 du 15 dm UO2_15_900K dr -2 void
+% det 216 du 16 dm UO2_16_900K dr -2 void
+% det 217 du 17 dm UO2_17_900K dr -2 void
+% det 218 du 18 dm UO2_18_900K dr -2 void
+% det 219 du 19 dm UO2_19_900K dr -2 void
+% det 220 du 20 dm UO2_20_900K dr -2 void
+
+
+% energy grids for spectral indices
+ene fast 1 6.25E-07 2.00E+01
+ene thermal 1 1.0000E-11 6.25E-07
+
+% detector materials
+mat U235_1 0.001051895 tmp 600.0 vol 0.06745695 92235.81c 0.001051895
+mat U235_2 0.001051895 tmp 600.0 vol 0.06745695 92235.81c 0.001051895
+mat U235_3 0.001051895 tmp 600.0 vol 0.06745695 92235.81c 0.001051895
+mat U235_4 0.001051895 tmp 600.0 vol 0.06745695 92235.81c 0.001051895
+mat U235_5 0.001051895 tmp 600.0 vol 0.06745695 92235.81c 0.001051895
+mat U235_6 0.001051895 tmp 600.0 vol 0.01264818 92235.81c 0.001051895
+mat U235_7 0.001051895 tmp 600.0 vol 0.01264818 92235.81c 0.001051895
+mat U235_8 0.001051895 tmp 600.0 vol 0.01264818 92235.81c 0.001051895
+mat U235_9 0.001051895 tmp 600.0 vol 0.01264818 92235.81c 0.001051895
+mat U235_10 0.001051895 tmp 600.0 vol 0.01264818 92235.81c 0.001051895
+mat U235_11 0.001051895 tmp 600.0 vol 0.01264818 92235.81c 0.001051895
+mat U235_12 0.001051895 tmp 600.0 vol 0.01264818 92235.81c 0.001051895
+mat U235_13 0.001051895 tmp 600.0 vol 0.01264818 92235.81c 0.001051895
+mat U235_14 0.001051895 tmp 600.0 vol 0.01264818 92235.81c 0.001051895
+mat U235_15 0.001051895 tmp 600.0 vol 0.01264818 92235.81c 0.001051895
+mat U235_16 0.001051895 tmp 600.0 vol 0.01264818 92235.81c 0.001051895
+mat U235_17 0.001051895 tmp 600.0 vol 0.01264818 92235.81c 0.001051895
+mat U235_18 0.001051895 tmp 600.0 vol 0.01264818 92235.81c 0.001051895
+mat U235_19 0.001051895 tmp 600.0 vol 0.01264818 92235.81c 0.001051895
+mat U235_20 0.001051895 tmp 600.0 vol 0.01264818 92235.81c 0.001051895
+
+
+mat U238_1 0.0222926 tmp 600.0 vol 0.06745695 92238.81c 0.0222926
+mat U238_2 0.0222926 tmp 600.0 vol 0.06745695 92238.81c 0.0222926
+mat U238_3 0.0222926 tmp 600.0 vol 0.06745695 92238.81c 0.0222926
+mat U238_4 0.0222926 tmp 600.0 vol 0.06745695 92238.81c 0.0222926
+mat U238_5 0.0222926 tmp 600.0 vol 0.06745695 92238.81c 0.0222926
+mat U238_6 0.0222926 tmp 600.0 vol 0.01264818 92238.81c 0.0222926
+mat U238_7 0.0222926 tmp 600.0 vol 0.01264818 92238.81c 0.0222926
+mat U238_8 0.0222926 tmp 600.0 vol 0.01264818 92238.81c 0.0222926
+mat U238_9 0.0222926 tmp 600.0 vol 0.01264818 92238.81c 0.0222926
+mat U238_10 0.0222926 tmp 600.0 vol 0.01264818 92238.81c 0.0222926
+mat U238_11 0.0222926 tmp 600.0 vol 0.01264818 92238.81c 0.0222926
+mat U238_12 0.0222926 tmp 600.0 vol 0.01264818 92238.81c 0.0222926
+mat U238_13 0.0222926 tmp 600.0 vol 0.01264818 92238.81c 0.0222926
+mat U238_14 0.0222926 tmp 600.0 vol 0.01264818 92238.81c 0.0222926
+mat U238_15 0.0222926 tmp 600.0 vol 0.01264818 92238.81c 0.0222926
+mat U238_16 0.0222926 tmp 600.0 vol 0.01264818 92238.81c 0.0222926
+mat U238_17 0.0222926 tmp 600.0 vol 0.01264818 92238.81c 0.0222926
+mat U238_18 0.0222926 tmp 600.0 vol 0.01264818 92238.81c 0.0222926
+mat U238_19 0.0222926 tmp 600.0 vol 0.01264818 92238.81c 0.0222926
+mat U238_20 0.0222926 tmp 600.0 vol 0.01264818 92238.81c 0.0222926
+
+% thermal capture in U238 in fuel regions   
+% det 301 du 1 dm UO2_1 dr 102 U238_1 de thermal 
+% det 302 du 2 dm UO2_2 dr 102 U238_2 de thermal 
+% det 303 du 3 dm UO2_3 dr 102 U238_3 de thermal 
+% det 304 du 4 dm UO2_4 dr 102 U238_4 de thermal 
+% det 305 du 5 dm UO2_5 dr 102 U238_5 de thermal 
+% det 306 du 6 dm UO2_6 dr 102 U238_6 de thermal 
+% det 307 du 7 dm UO2_7 dr 102 U238_7 de thermal 
+% det 308 du 8 dm UO2_8 dr 102 U238_8 de thermal 
+% det 309 du 9 dm UO2_9 dr 102 U238_9 de thermal 
+% det 310 du 10 dm UO2_10 dr 102 U238_10 de thermal 
+% det 311 du 11 dm UO2_11 dr 102 U238_11 de thermal 
+% det 312 du 12 dm UO2_12 dr 102 U238_12 de thermal 
+% det 313 du 13 dm UO2_13 dr 102 U238_13 de thermal 
+% det 314 du 14 dm UO2_14 dr 102 U238_14 de thermal 
+% det 315 du 15 dm UO2_15 dr 102 U238_15 de thermal 
+% det 316 du 16 dm UO2_16 dr 102 U238_16 de thermal 
+% det 317 du 17 dm UO2_17 dr 102 U238_17 de thermal 
+% det 318 du 18 dm UO2_18 dr 102 U238_18 de thermal 
+% det 319 du 19 dm UO2_19 dr 102 U238_19 de thermal 
+% det 320 du 20 dm UO2_20 dr 102 U238_20 de thermal 
+
+% fast capture in U238 in fuel regions     
+% det 401 du 1 dm UO2_1 dr 102 U238_1 de fast
+% det 402 du 2 dm UO2_2 dr 102 U238_2 de fast
+% det 403 du 3 dm UO2_3 dr 102 U238_3 de fast
+% det 404 du 4 dm UO2_4 dr 102 U238_4 de fast
+% det 405 du 5 dm UO2_5 dr 102 U238_5 de fast
+% det 406 du 6 dm UO2_6 dr 102 U238_6 de fast
+% det 407 du 7 dm UO2_7 dr 102 U238_7 de fast
+% det 408 du 8 dm UO2_8 dr 102 U238_8 de fast
+% det 409 du 9 dm UO2_9 dr 102 U238_9 de fast
+% det 410 du 10 dm UO2_10 dr 102 U238_10 de fast
+% det 411 du 11 dm UO2_11 dr 102 U238_11 de fast
+% det 412 du 12 dm UO2_12 dr 102 U238_12 de fast
+% det 413 du 13 dm UO2_13 dr 102 U238_13 de fast
+% det 414 du 14 dm UO2_14 dr 102 U238_14 de fast
+% det 415 du 15 dm UO2_15 dr 102 U238_15 de fast
+% det 416 du 16 dm UO2_16 dr 102 U238_16 de fast
+% det 417 du 17 dm UO2_17 dr 102 U238_17 de fast
+% det 418 du 18 dm UO2_18 dr 102 U238_18 de fast
+% det 419 du 19 dm UO2_19 dr 102 U238_19 de fast
+% det 420 du 20 dm UO2_20 dr 102 U238_20 de fast
+
+% thermal capture in U235 in fuel regions   
+% det 501 du 1 dm UO2_1 dr 102 U235_1 de thermal 
+% det 502 du 2 dm UO2_2 dr 102 U235_2 de thermal 
+% det 503 du 3 dm UO2_3 dr 102 U235_3 de thermal 
+% det 504 du 4 dm UO2_4 dr 102 U235_4 de thermal 
+% det 505 du 5 dm UO2_5 dr 102 U235_5 de thermal 
+% det 506 du 6 dm UO2_6 dr 102 U235_6 de thermal 
+% det 507 du 7 dm UO2_7 dr 102 U235_7 de thermal 
+% det 508 du 8 dm UO2_8 dr 102 U235_8 de thermal 
+% det 509 du 9 dm UO2_9 dr 102 U235_9 de thermal 
+% det 510 du 10 dm UO2_10 dr 102 U235_10 de thermal 
+% det 511 du 11 dm UO2_11 dr 102 U235_11 de thermal 
+% det 512 du 12 dm UO2_12 dr 102 U235_12 de thermal 
+% det 513 du 13 dm UO2_13 dr 102 U235_13 de thermal 
+% det 514 du 14 dm UO2_14 dr 102 U235_14 de thermal 
+% det 515 du 15 dm UO2_15 dr 102 U235_15 de thermal 
+% det 516 du 16 dm UO2_16 dr 102 U235_16 de thermal 
+% det 517 du 17 dm UO2_17 dr 102 U235_17 de thermal 
+% det 518 du 18 dm UO2_18 dr 102 U235_18 de thermal 
+% det 519 du 19 dm UO2_19 dr 102 U235_19 de thermal 
+% det 520 du 20 dm UO2_20 dr 102 U235_20 de thermal 
+
+% fast capture in U235 in fuel regions     
+% det 601 du 1 dm UO2_1 dr 102 U235_1 de fast
+% det 602 du 2 dm UO2_2 dr 102 U235_2 de fast
+% det 603 du 3 dm UO2_3 dr 102 U235_3 de fast
+% det 604 du 4 dm UO2_4 dr 102 U235_4 de fast
+% det 605 du 5 dm UO2_5 dr 102 U235_5 de fast
+% det 606 du 6 dm UO2_6 dr 102 U235_6 de fast
+% det 607 du 7 dm UO2_7 dr 102 U235_7 de fast
+% det 608 du 8 dm UO2_8 dr 102 U235_8 de fast
+% det 609 du 9 dm UO2_9 dr 102 U235_9 de fast
+% det 610 du 10 dm UO2_10 dr 102 U235_10 de fast
+% det 611 du 11 dm UO2_11 dr 102 U235_11 de fast
+% det 612 du 12 dm UO2_12 dr 102 U235_12 de fast
+% det 613 du 13 dm UO2_13 dr 102 U235_13 de fast
+% det 614 du 14 dm UO2_14 dr 102 U235_14 de fast
+% det 615 du 15 dm UO2_15 dr 102 U235_15 de fast
+% det 616 du 16 dm UO2_16 dr 102 U235_16 de fast
+% det 617 du 17 dm UO2_17 dr 102 U235_17 de fast
+% det 618 du 18 dm UO2_18 dr 102 U235_18 de fast
+% det 619 du 19 dm UO2_19 dr 102 U235_19 de fast
+% det 620 du 20 dm UO2_20 dr 102 U235_20 de fast
+
+% detectors 701-720
+%  Total capture - thermal
+% det 701 du 1 dm UO2_1 dr -2 void de thermal
+% det 702 du 2 dm UO2_2 dr -2 void de thermal
+% det 703 du 3 dm UO2_3 dr -2 void de thermal
+% det 704 du 4 dm UO2_4 dr -2 void de thermal
+% det 705 du 5 dm UO2_5 dr -2 void de thermal
+% det 706 du 6 dm UO2_6 dr -2 void de thermal
+% det 707 du 7 dm UO2_7 dr -2 void de thermal
+% det 708 du 8 dm UO2_8 dr -2 void de thermal
+% det 709 du 9 dm UO2_9 dr -2 void de thermal
+% det 710 du 10 dm UO2_10 dr -2 void de thermal
+% det 711 du 11 dm UO2_11 dr -2 void de thermal
+% det 712 du 12 dm UO2_12 dr -2 void de thermal
+% det 713 du 13 dm UO2_13 dr -2 void de thermal
+% det 714 du 14 dm UO2_14 dr -2 void de thermal
+% det 715 du 15 dm UO2_15 dr -2 void de thermal
+% det 716 du 16 dm UO2_16 dr -2 void de thermal
+% det 717 du 17 dm UO2_17 dr -2 void de thermal
+% det 718 du 18 dm UO2_18 dr -2 void de thermal
+% det 719 du 19 dm UO2_19 dr -2 void de thermal
+% det 720 du 20 dm UO2_20 dr -2 void de thermal
+
+% detectors 801-820
+%  Total capture - thermal
+% det 801 du 1 dm UO2_1 dr -2 void de fast
+% det 802 du 2 dm UO2_2 dr -2 void de fast
+% det 803 du 3 dm UO2_3 dr -2 void de fast
+% det 804 du 4 dm UO2_4 dr -2 void de fast
+% det 805 du 5 dm UO2_5 dr -2 void de fast
+% det 806 du 6 dm UO2_6 dr -2 void de fast
+% det 807 du 7 dm UO2_7 dr -2 void de fast
+% det 808 du 8 dm UO2_8 dr -2 void de fast
+% det 809 du 9 dm UO2_9 dr -2 void de fast
+% det 810 du 10 dm UO2_10 dr -2 void de fast
+% det 811 du 11 dm UO2_11 dr -2 void de fast
+% det 812 du 12 dm UO2_12 dr -2 void de fast
+% det 813 du 13 dm UO2_13 dr -2 void de fast
+% det 814 du 14 dm UO2_14 dr -2 void de fast
+% det 815 du 15 dm UO2_15 dr -2 void de fast
+% det 816 du 16 dm UO2_16 dr -2 void de fast
+% det 817 du 17 dm UO2_17 dr -2 void de fast
+% det 818 du 18 dm UO2_18 dr -2 void de fast
+% det 819 du 19 dm UO2_19 dr -2 void de fast
+% det 820 du 20 dm UO2_20 dr -2 void de fast
+
+
+

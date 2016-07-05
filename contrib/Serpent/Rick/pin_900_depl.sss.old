@@ -1,0 +1,149 @@
+set title "Single PWR pin depletion "
+% based on the AP-1000 design 
+% with a fixed fuel temperature - 1000K 
+
+
+
+% --- Cross section library file path:
+set acelib "/Users/kerblm/Desktop/c757mnyws00/xsdata/sss_endfb7u.xsdata"
+set declib "/Users/kerblm/Desktop/c757mnyws00/xsdata/dec-ENDF-VII1.endf.txt"
+set nfylib "/Users/kerblm/Desktop/c757mnyws00/xsdata/nfy-ENDF-VII1.endf.txt"
+
+% set acelib "/home/ortej/MCNP/data/serp.xsdir"
+
+% --- Periodic boundary condition:
+set bc 2
+
+% power distribution & power in W/cm
+set power 192.235
+
+% no unionized Egrid
+% set dix 1
+% unresolved resonance
+set ures 1 1
+
+% --- Neutron population and criticality cycles:
+set pop 1000000 300 50
+
+set nbuf 8
+set opti 4
+set nfg 8  5.5498E-08 1.3800E-07 2.7999E-07 6.2500E-07 4.0000E-06 5.0045E-03 7.0651E-01
+set gcu 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 50
+
+%set egrid 1.0e-06 1.0e-06 10.0
+%set dix 1
+
+% --- Geometry and mesh plots:
+% plot 3 800 800 0 -0.70 0.70 -0.70 0.70
+% mesh 3 800 800 0 -0.70 0.70 -0.70 0.70
+
+include "./geometry.inp"
+include "./materials_900K_LMK.inp"
+include "./tallies_900K.inp"
+
+% for depletion calc
+set bumode  2  % CRAM method
+% set pcc     4  3 5 % Predictor-corrector calculation on
+set pcc 1
+set xscalc  1  % Cross sections from spectrum
+set bunorm  1  % across all materials
+
+dep butot
+
+0.02
+0.04
+0.08
+0.2
+0.4
+0.8
+1.2
+2
+4
+6
+8
+10
+12
+14
+16
+18
+20
+22
+24
+26
+28
+30
+32
+34
+
+branch nom
+
+branch T600
+stp UO2_1_900K sum 600
+stp UO2_2_900K sum 600
+stp UO2_3_900K sum 600
+stp UO2_4_900K sum 600
+stp UO2_5_900K sum 600
+stp UO2_6_900K sum 600
+stp UO2_7_900K sum 600
+stp UO2_8_900K sum 600
+stp UO2_9_900K sum 600
+stp UO2_10_900K sum 600
+stp UO2_11_900K sum 600
+stp UO2_12_900K sum 600
+stp UO2_13_900K sum 600
+stp UO2_14_900K sum 600
+stp UO2_15_900K sum 600
+stp UO2_16_900K sum 600
+stp UO2_17_900K sum 600
+stp UO2_18_900K sum 600
+stp UO2_19_900K sum 600
+stp UO2_20_900K sum 600
+
+branch T1200
+stp UO2_1_900K sum 1200
+stp UO2_2_900K sum 1200
+stp UO2_3_900K sum 1200
+stp UO2_4_900K sum 1200
+stp UO2_5_900K sum 1200
+stp UO2_6_900K sum 1200
+stp UO2_7_900K sum 1200
+stp UO2_8_900K sum 1200
+stp UO2_9_900K sum 1200
+stp UO2_10_900K sum 1200
+stp UO2_11_900K sum 1200
+stp UO2_12_900K sum 1200
+stp UO2_13_900K sum 1200
+stp UO2_14_900K sum 1200
+stp UO2_15_900K sum 1200
+stp UO2_16_900K sum 1200
+stp UO2_17_900K sum 1200
+stp UO2_18_900K sum 1200
+stp UO2_19_900K sum 1200
+stp UO2_20_900K sum 1200
+
+branch T2500
+stp UO2_1_900K sum 2500
+stp UO2_2_900K sum 2500
+stp UO2_3_900K sum 2500
+stp UO2_4_900K sum 2500
+stp UO2_5_900K sum 2500
+stp UO2_6_900K sum 2500
+stp UO2_7_900K sum 2500
+stp UO2_8_900K sum 2500
+stp UO2_9_900K sum 2500
+stp UO2_10_900K sum 2500
+stp UO2_11_900K sum 2500
+stp UO2_12_900K sum 2500
+stp UO2_13_900K sum 2500
+stp UO2_14_900K sum 2500
+stp UO2_15_900K sum 2500
+stp UO2_16_900K sum 2500
+stp UO2_17_900K sum 2500
+stp UO2_18_900K sum 2500
+stp UO2_19_900K sum 2500
+stp UO2_20_900K sum 2500
+
+coef 25
+0.0 0.02 0.04 0.08 0.2 0.4 0.8 1.2 2 4 6 8 10 12 14 16 18 20 22 24 26 28 30 32 34
+4 nom T600 T1200 T2500
+
