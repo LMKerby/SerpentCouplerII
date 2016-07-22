@@ -1,0 +1,9 @@
+0x00007fff8f333696 in _objc_opt_rw_data () from /usr/lib/system/libsystem_kernel.dylib
+#0  0x00007fff8f333696 in _objc_opt_rw_data () from /usr/lib/system/libsystem_kernel.dylib
+#1  0x00007fff90c98fdd in system () from /usr/lib/system/libsystem_c.dylib
+#2  0x000000010a3e42e7 in libMesh::print_trace(std::ostream&) () from /Users/kerblm/projects/moose/scripts/../libmesh/installed/lib/libmesh_opt.0.dylib
+#3  0x0000000109b3d15c in MooseUtils::checkFileReadable(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, bool, bool) () from /Users/kerblm/projects/moose/framework/libmoose-opt.0.dylib
+#4  0x0000000109941f22 in Parser::parse(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) () from /Users/kerblm/projects/moose/framework/libmoose-opt.0.dylib
+#5  0x00000001096270e6 in MooseApp::setupOptions() () from /Users/kerblm/projects/moose/framework/libmoose-opt.0.dylib
+#6  0x000000010961f912 in MooseApp::run() () from /Users/kerblm/projects/moose/framework/libmoose-opt.0.dylib
+#7  0x0000000107af9c69 in main ()

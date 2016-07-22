@@ -1,0 +1,12 @@
+[New Thread 0x1303 of process 36368]
+[New Thread 0x1403 of process 36368]
+0x00007fff962fa696 in _objc_opt_rw_data () from /usr/lib/system/libsystem_kernel.dylib
+#0  0x00007fff962fa696 in _objc_opt_rw_data () from /usr/lib/system/libsystem_kernel.dylib
+#1  0x00007fff97c5ffdd in system () from /usr/lib/system/libsystem_c.dylib
+#2  0x00000001102cb6f7 in libMesh::print_trace(std::ostream&) () from /Users/kerblm/projects/moose/scripts/../libmesh/installed/lib/libmesh_opt.0.dylib
+#3  0x000000010f93d23c in TimeStepper::computeFailedDT() () from /Users/kerblm/projects/moose/framework/libmoose-opt.0.dylib
+#4  0x000000010f93ce1e in TimeStepper::computeStep() () from /Users/kerblm/projects/moose/framework/libmoose-opt.0.dylib
+#5  0x000000010f606c8d in Transient::execute() () from /Users/kerblm/projects/moose/framework/libmoose-opt.0.dylib
+#6  0x000000010f4dabf2 in MooseApp::executeExecutioner() () from /Users/kerblm/projects/moose/framework/libmoose-opt.0.dylib
+#7  0x000000010f4df7e3 in MooseApp::run() () from /Users/kerblm/projects/moose/framework/libmoose-opt.0.dylib
+#8  0x000000010d95ac69 in main ()

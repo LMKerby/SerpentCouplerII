@@ -1,0 +1,11 @@
+7 fuel1 1
+mooseifc_new.m
+1.0 600
+5 3 4 4 4
+mooseifc_new.points
+mooseifc_new.faces
+mooseifc_new.owners
+mooseifc_new.neighbors
+mooseifc_new.rho 1
+mooseifc_new.T 1
+mooseifc_new.map

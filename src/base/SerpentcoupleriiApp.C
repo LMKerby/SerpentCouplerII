@@ -3,6 +3,11 @@
 #include "AppFactory.h"
 #include "ModulesApp.h"
 #include "MooseSyntax.h"
+#include "RunSerpent.h"
+#include "HeatToMoose.h"
+#include "ElementTransfer.h"
+#include "ElementHeatSource.h"
+
 
 template<>
 InputParameters validParams<SerpentcoupleriiApp>()
@@ -45,6 +50,11 @@ extern "C" void SerpentcoupleriiApp__registerObjects(Factory & factory) { Serpen
 void
 SerpentcoupleriiApp::registerObjects(Factory & factory)
 {
+  registerUserObject(ElementTransfer);
+  registerUserObject(RunSerpent);
+  registerUserObject(HeatToMoose);
+  registerKernel(ElementHeatSource);
+
 }
 
 // External entry point for dynamic syntax association
