@@ -4,7 +4,7 @@
 #
 # Optional Environment variables
 # MOOSE_DIR        - Root directory of the MOOSE project
-MOOSE_DIR    := /Users/kerblm/projects/moose
+# MOOSE_DIR    := /Users/kerblm/projects/moose
 #
 ###############################################################################
 # Use the MOOSE submodule if it exists and MOOSE_DIR is not set
@@ -31,6 +31,7 @@ APPLICATION_NAME   := SerpentCouplerII
 BUILD_EXEC         := yes
 DEP_APPS           := $(shell $(FRAMEWORK_DIR)/scripts/find_dep_apps.py $(APPLICATION_NAME))
 include            $(FRAMEWORK_DIR)/app.mk
+# ADDITIONAL_CXXFLAGS += -fopenmp -lgd -lm -omp
 
 # Serpent (optional)
 # SERPENT_DIR          ?= $(CURDIR)/contrib/Serpent
@@ -42,7 +43,7 @@ include            $(FRAMEWORK_DIR)/app.mk
 #  ADDITIONAL_CXXFLAGS += -fopenmp -lgd -lm
 # endif
 
-include            $(CURDIR)/serpent2.mk
+#include            $(CURDIR)/serpent.mk
 
 ###############################################################################
 # Additional special case targets should be added here
