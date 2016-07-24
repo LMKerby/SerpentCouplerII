@@ -25,7 +25,7 @@ RunSerpent::RunSerpent(const InputParameters & parameters) :
 void RunSerpent::initialize()
 {
   char **argumentti;
-  int numarg = 4;
+  int numarg = 5;
 
   if(_initialized == 0)
     {
@@ -44,7 +44,7 @@ void RunSerpent::initialize()
       sprintf(argumentti[0],"input");
       sprintf(argumentti[2],"-omp");
       sprintf(argumentti[3],"3");
-      //sprintf(argumentti[4],"-ext");
+      sprintf(argumentti[4],"-ext");
       sprintf(argumentti[1],"input");
       //      sprintf(argumentti[3],"-plot");
       std::cout << "Calling Cmain" << std::endl;

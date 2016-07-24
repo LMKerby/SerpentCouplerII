@@ -31,6 +31,7 @@ APPLICATION_NAME   := SerpentCouplerII
 BUILD_EXEC         := yes
 DEP_APPS           := $(shell $(FRAMEWORK_DIR)/scripts/find_dep_apps.py $(APPLICATION_NAME))
 include            $(FRAMEWORK_DIR)/app.mk
+# CFLAGS             += -fopenmp -lgd -lm
 # ADDITIONAL_CXXFLAGS += -fopenmp -lgd -lm -omp
 
 # Serpent (optional)

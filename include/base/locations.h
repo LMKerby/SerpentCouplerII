@@ -826,7 +826,7 @@ extern "C" {
 /* LMK added to couple to MOOSE 7/2016 */
 /* Running in source code coupled mode (MOOSE) */
 
-//#define DATA_EXT_MODE                  1198
+#define DATA_EXT_MODE                  1198
 /* end LMK */
 
 /* Interface current method */

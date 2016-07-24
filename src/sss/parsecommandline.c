@@ -358,7 +358,7 @@ long ParseCommandLine(int argc, char **argv)
 
 #endif
 /* LMK added to couple to MOOSE 7/2016 */
-/* Called by external program 
+/* Called by external program */
       else if (!strcmp(argv[n], "-ext"))
   {
      WDB[DATA_EXT_MODE] = (double)YES;

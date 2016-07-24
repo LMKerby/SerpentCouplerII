@@ -616,7 +616,7 @@ int Cmain(int argc, char** argv)
 	  StopTimer(TIMER_INIT_TOTAL);
 
 /* LMK added to couple to MOOSE 7/2016 */
-    /* Check external calculation mode and wait if needed 
+    /* Check external calculation mode and wait if needed */
 
     if((long)RDB[DATA_EXT_MODE] == YES)
 {

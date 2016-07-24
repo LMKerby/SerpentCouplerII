@@ -35,10 +35,6 @@ public:
    */
   virtual void finalize();
 
-/* LMK, added declarations for Cmain and UpdateInterface, 7/2016 */
-//  int Cmain(int, char**);
-//  void UpdateInterface();
-
 private:
 
   int _initialized, _run;
