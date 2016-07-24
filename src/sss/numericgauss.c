@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : numericgauss.c                                 */
@@ -219,3 +222,6 @@ long NumericGauss(struct ccsMatrix *cmat, complex *c, complex chv, complex *x)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

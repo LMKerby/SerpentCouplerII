@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : runfinix.c                                     */
@@ -228,3 +231,6 @@ void RunFinix(long fib, long fpe)
 #endif
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : element.c                                      */
@@ -165,3 +168,6 @@ void Element(char *name, char *dens, char *id)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

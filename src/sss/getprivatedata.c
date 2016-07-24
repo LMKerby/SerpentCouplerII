@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : getprivatedata.c                               */
@@ -56,3 +59,6 @@ double GetPrivateData(long ptr, long id)
 #endif
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

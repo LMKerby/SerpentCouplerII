@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : tetravol.c                                     */
@@ -139,3 +142,6 @@ double TetraVol(long ifc, long cgns)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

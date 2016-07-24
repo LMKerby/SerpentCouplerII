@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : sampleptable.c                                 */
@@ -154,3 +157,6 @@ double SamplePTable(long urs, double E, long id)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

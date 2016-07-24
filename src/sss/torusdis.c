@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : Torusdis.c                                     */
@@ -461,3 +464,6 @@ double Iterate(double min, double max, const double *coe)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

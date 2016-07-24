@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : findmaterialpointers.c                         */
@@ -494,3 +497,6 @@ void FindMaterialPointers()
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

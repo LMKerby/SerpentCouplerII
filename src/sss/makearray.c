@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : makearray.c                                    */
@@ -52,3 +55,6 @@ double *MakeArray(double min, double max, long N, long mode)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

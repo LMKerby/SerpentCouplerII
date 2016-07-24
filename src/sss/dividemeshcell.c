@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : dividemeshcell.c                               */
@@ -739,3 +742,6 @@ void DivideMeshCell(long ifc, long cgns, long hex[8], long (*diags)[8],
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

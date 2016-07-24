@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : processphotonatt.c                             */
@@ -250,3 +253,6 @@ void ProcessPhotonAtt()
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : relaxinterfacepower.c                          */
@@ -466,3 +469,6 @@ void RelaxInterfacePower()
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

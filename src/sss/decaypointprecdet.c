@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : decaypointprecdet.c                            */
@@ -99,3 +102,6 @@ void DecayPointPrecDet()
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

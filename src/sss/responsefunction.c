@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : responsefunction.c                             */
@@ -27,3 +30,6 @@ double ResponseFunction(double E, long type)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : searcharray.c                                  */
@@ -139,3 +142,6 @@ long SearchArray(const double *dat, double val, long N)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

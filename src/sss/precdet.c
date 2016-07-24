@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : precdet.c                                      */
@@ -688,3 +691,6 @@ void PrecDet(long part, long mat, double flx, double g, double wgt0, double x0,
     }
 
 }
+#ifdef __cplusplus 
+} 
+#endif 

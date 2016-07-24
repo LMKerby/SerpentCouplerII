@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : scoregc.c                                      */
@@ -257,3 +260,6 @@ void ScoreGC(double flx, double tot, double capt, double fiss, double fissE,
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

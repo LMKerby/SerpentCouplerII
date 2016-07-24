@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : hisrelerr.c                                    */
@@ -160,3 +163,6 @@ double HisRelErr(long ptr, long cycle, ...)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

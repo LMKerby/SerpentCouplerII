@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : storehistorypoint.c                            */
@@ -168,3 +171,6 @@ void StoreHistoryPoint(long part, long mat, long rea, double x, double y,
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

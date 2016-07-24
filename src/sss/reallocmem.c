@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : reallocmem.c                                   */
@@ -241,3 +244,6 @@ long ReallocMem(long type, long sz)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

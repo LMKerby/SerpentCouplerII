@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : endfinterp.c                                   */
@@ -116,3 +119,6 @@ double ENDFInterp(long type, double x, double x0, double x1, double y0,
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

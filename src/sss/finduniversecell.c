@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : finduniversecell.c                             */
@@ -168,3 +171,6 @@ long FindUniverseCell(long uni, double x, double y, double z, long *ridx,
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

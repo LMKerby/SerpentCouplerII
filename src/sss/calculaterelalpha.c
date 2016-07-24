@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : calculaterelalpha.c                            */
@@ -56,3 +59,6 @@ void CalculateRelAlpha()
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : cspline.c                                      */
@@ -324,3 +327,6 @@ double CSplineIntegrate0(double *x0, double *f0, long N0, double d2f0,
   return Fab;
 }
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

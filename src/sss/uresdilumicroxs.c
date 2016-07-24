@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : uresdilumicroxs.c                              */
@@ -177,3 +180,6 @@ double UresDiluMicroXS(long rea, double E, long id)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

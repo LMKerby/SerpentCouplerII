@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : readifcofmesh.c                                */
@@ -1849,3 +1852,6 @@ void ReadIFCOFMesh(long loc0, long update)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

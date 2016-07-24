@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : setdirectpointers.c                            */
@@ -83,3 +86,6 @@ void SetDirectPointers(long lst)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

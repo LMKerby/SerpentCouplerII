@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : movedt.c                                       */
@@ -264,3 +267,6 @@ long MoveDT(long part, double majorant, double minxs, long *cell, double *xs0,
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

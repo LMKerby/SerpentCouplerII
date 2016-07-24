@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : scoreicmcol.c                                  */
@@ -189,3 +192,6 @@ void ScoreICMCol(double flx, double capt, double fiss, double nsf,
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : invokebranch.c                                 */
@@ -571,3 +574,6 @@ void InvokeBranch(long loc0)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

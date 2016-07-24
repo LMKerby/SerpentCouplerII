@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : readumshgeometry.c                             */
@@ -1272,3 +1275,6 @@ void ReadUMSHGeometry()
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

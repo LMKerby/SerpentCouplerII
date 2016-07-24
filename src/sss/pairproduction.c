@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : pairproduction.c                               */
@@ -229,3 +232,6 @@ void PairProduction(long mat, long rea, long part, double E, double x, double y,
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : iteratecc.c                                    */
@@ -141,3 +144,6 @@ void IterateCC()
 
   return;
 }
+#ifdef __cplusplus 
+} 
+#endif 

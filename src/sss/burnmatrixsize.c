@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : burnmatrixsize.c                               */
@@ -91,3 +94,6 @@ long BurnMatrixSize(long mat)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

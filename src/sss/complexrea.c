@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : complexrea.c                                   */
@@ -199,3 +202,6 @@ void ComplexRea(long rea, long part, double *E0, double x, double y, double z,
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

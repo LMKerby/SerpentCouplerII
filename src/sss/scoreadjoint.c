@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : scoreadjoint.c                                 */
@@ -102,3 +105,6 @@ void ScoreAdjoint(long part, long mat, long rea, double flx, double x,
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

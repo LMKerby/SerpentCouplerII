@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : formtransmupathsc.c                            */
@@ -431,3 +434,6 @@ void FormTransmuPaths(long nuc, long l, double Tmin, double Tmax, long mode,
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

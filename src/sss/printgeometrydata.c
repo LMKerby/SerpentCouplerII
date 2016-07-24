@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : printgeometrydata.c                            */
@@ -183,3 +186,6 @@ void PrintGeometryData()
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

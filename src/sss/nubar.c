@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : nubar.c                                        */
@@ -131,3 +134,6 @@ double Nubar(long loc0, double E, long id)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : addstat.c                                      */
@@ -140,3 +143,6 @@ void AddStat(double val, long ptr, ...)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

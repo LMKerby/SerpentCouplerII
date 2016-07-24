@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : processbradata.c                               */
@@ -141,3 +144,6 @@ void ProcessBraData(long nuc)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

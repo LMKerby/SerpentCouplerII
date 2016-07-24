@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : duplicateparticle.c                            */
@@ -168,3 +171,6 @@ long DuplicateParticle(long ptr, long id)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

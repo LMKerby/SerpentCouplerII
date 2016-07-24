@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : samplereaction.c                               */
@@ -582,3 +585,6 @@ long SampleReaction(long mat, long type, double E, double wgt, long id)
   
   /***************************************************************************/
 }
+#ifdef __cplusplus 
+} 
+#endif 

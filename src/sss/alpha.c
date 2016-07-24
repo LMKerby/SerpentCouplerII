@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : alpha.c                                        */
@@ -44,3 +47,6 @@ void Alpha(double E, double majorant, double *wgt)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : stopatwwbound.c                                */
@@ -71,3 +74,6 @@ long StopAtWWBound(long trk, double *x, double *y, double *z, double u,
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

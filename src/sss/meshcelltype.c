@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : meshcelltype.c                                 */
@@ -110,3 +113,6 @@ long MeshCellType(long cgns, long ifc)
     return MESH_CELL_TYPE_POLY;
 
 }
+#ifdef __cplusplus 
+} 
+#endif 

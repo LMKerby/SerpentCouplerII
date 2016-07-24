@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : additem.c                                      */
@@ -107,3 +110,6 @@ void AddItem(long root, long new)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : gridsearch.c                                   */
@@ -189,3 +192,6 @@ long GridSearch(long erg, double E)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

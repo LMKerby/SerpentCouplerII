@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : redistributestacs.c                            */
@@ -175,3 +178,6 @@ void ReDistributeStacks()
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

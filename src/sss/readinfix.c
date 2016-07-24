@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : readinfix.c                                    */
@@ -134,3 +137,6 @@ long ReadInfix(long cell, long *infix, long *nspec)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

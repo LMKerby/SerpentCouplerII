@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : allocstathistory.c                             */
@@ -50,3 +53,6 @@ void AllocStatHistory(long loc0)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

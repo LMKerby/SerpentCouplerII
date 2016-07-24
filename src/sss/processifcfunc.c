@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : processifcfunc.c                               */
@@ -203,3 +206,6 @@ void ProcessIFCFunc(long loc0, long update)
   return;
 
 }
+#ifdef __cplusplus 
+} 
+#endif 

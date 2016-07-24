@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : cyldis.c                                       */
@@ -55,3 +58,6 @@ double CylDis(double x, double y, double u, double v, double r)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

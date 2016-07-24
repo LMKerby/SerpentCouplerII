@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : makepalette.c                                  */
@@ -2670,3 +2673,6 @@ void MakePalette(long *r0, long *g0, long *b0, long colors, long type)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

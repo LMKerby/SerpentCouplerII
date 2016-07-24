@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : getimportantpts.c                              */
@@ -222,3 +225,6 @@ double *GetImportantPts(long ace, long *NXS, long *JXS, long *ni)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

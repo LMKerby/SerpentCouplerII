@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : fission.c                                      */
@@ -451,3 +454,6 @@ void Fission(long mat, long rea, long part, double *E0, double t0, double x,
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

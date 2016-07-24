@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : superdet.c                                     */
@@ -402,3 +405,6 @@ void SuperDet(long part, double x0, double y0, double z0, double u, double v,
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

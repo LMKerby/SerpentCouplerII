@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : getlatticeindexes.c                            */
@@ -79,3 +82,6 @@ long GetLatticeIndexes(double px, double py, double pz, double x0, double y0,
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

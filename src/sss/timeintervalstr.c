@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : timeintervalstr.c                              */
@@ -110,3 +113,6 @@ char *TimeIntervalStr(double sec)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

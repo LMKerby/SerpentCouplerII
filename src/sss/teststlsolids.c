@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : teststlgeometry.c                              */
@@ -130,3 +133,6 @@ void TestSTLSolids(long stl, long np, long nd)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : addstlpoint.c                                  */
@@ -154,3 +157,6 @@ long AddSTLPoint(long ***arr, long stl, long fle, long sld,
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

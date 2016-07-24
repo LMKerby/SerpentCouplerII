@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : processlattices.c                              */
@@ -104,3 +107,6 @@ void ProcessLattices()
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

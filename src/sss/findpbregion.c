@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : findpbregion.c                                 */
@@ -198,3 +201,6 @@ long FindPBRegion(long uni0, long pbd, double *x, double *y, double *z,
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

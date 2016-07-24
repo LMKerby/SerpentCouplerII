@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : nextitem.c                                     */
@@ -55,3 +58,6 @@ long NextItem(long ptr)
 #endif
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

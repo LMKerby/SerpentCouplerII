@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : meshval.c                                      */
@@ -70,3 +73,6 @@ double MeshVal(long msh, double x, double y, double z)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

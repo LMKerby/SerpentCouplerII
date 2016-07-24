@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : printmaterialdata.c                            */
@@ -372,3 +375,6 @@ void PrintMaterialData()
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

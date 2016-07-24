@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : lifolistsize.c                                 */
@@ -48,3 +51,6 @@ long LIFOListSize(long root)
 
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

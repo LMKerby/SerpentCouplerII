@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : addpts.c                                       */
@@ -123,3 +126,6 @@ double *AddPts(double *A1, long *norig, const double *A2, long sz2)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

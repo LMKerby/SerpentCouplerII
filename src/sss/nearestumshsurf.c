@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : nearestumshsurf.c                              */
@@ -373,3 +376,6 @@ double NearestUMSHSurf(long ifc, double x, double y, double z,
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

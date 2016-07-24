@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : readdirectoryfile.c                            */
@@ -420,3 +423,6 @@ void ReadDirectoryFile()
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

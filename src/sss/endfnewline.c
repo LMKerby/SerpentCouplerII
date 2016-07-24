@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : endfnewline.c                                  */
@@ -34,3 +37,6 @@ void ENDFNewLine(char *func, char *line, FILE *fp)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

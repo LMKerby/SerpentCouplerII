@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : ccsmatrixnew.c                                 */
@@ -51,3 +54,6 @@ struct ccsMatrix *ccsMatrixNew(long m, long n, long nnz)
 
 /*****************************************************************************/
 
+#ifdef __cplusplus 
+} 
+#endif 

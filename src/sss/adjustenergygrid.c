@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : adjustenergygrid.c                             */
@@ -84,3 +87,6 @@ void AdjustEnergyGrid(long erg, long ne, const double *E)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

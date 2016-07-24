@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : makeburnmatrix.c                               */
@@ -491,3 +494,6 @@ void Funktio(long rea, long mat, double flx, long id)
 
 /*****************************************************************************/
 
+#ifdef __cplusplus 
+} 
+#endif 

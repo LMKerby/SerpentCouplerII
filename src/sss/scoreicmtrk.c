@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : scoreicmtrk.c                                  */
@@ -362,3 +365,6 @@ void ScoreICMTrk(long part, double x0, double y0, double z0, double u,
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

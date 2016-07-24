@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : processpairproduction.c                        */
@@ -173,3 +176,6 @@ void ProcessPairProduction(long loc0, long nuc) {
   /*************************************************************************/
 
 }
+#ifdef __cplusplus 
+} 
+#endif 

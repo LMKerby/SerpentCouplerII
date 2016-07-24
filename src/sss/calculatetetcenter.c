@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : calculatetetcenter.c                           */
@@ -144,3 +147,6 @@ void CalculateTetCenter(long cgns, long surflist, long cellpts, long facepts)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

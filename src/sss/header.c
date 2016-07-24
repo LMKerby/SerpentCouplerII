@@ -1,8 +1,7 @@
-/* Added to compile on Mac, LMK 6/2016 */
-
 #ifdef __cplusplus
 extern "C" {
 #endif
+/* Added file to compile on Mac, LMK 6/2016 */
 
 #include <header.h>
 

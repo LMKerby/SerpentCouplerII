@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : checkpointer.c                                 */
@@ -86,3 +89,6 @@ void CheckPointer (char *fname, char *comment, long type, long ptr)
 #endif
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

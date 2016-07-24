@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : processdecaydata.c                             */
@@ -207,3 +210,6 @@ void ProcessDecayData(long nuc)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

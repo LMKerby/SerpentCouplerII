@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : coldet.c                                       */
@@ -303,3 +306,6 @@ void ColDet(long part, long mat0, double flx0, double x0, double y0,
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

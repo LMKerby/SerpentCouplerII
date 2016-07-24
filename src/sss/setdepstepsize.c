@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : setdepstepsize.c                               */
@@ -338,3 +341,6 @@ double Calculate_t_from_bu(double bu)
   return t;
 
 }
+#ifdef __cplusplus 
+} 
+#endif 

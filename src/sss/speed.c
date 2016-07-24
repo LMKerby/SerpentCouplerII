@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : speed.c                                        */
@@ -45,3 +48,6 @@ double Speed(long type, double E)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

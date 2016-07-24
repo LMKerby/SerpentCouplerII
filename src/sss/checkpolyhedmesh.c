@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : checkpolyhedmesh.c                             */
@@ -424,3 +427,6 @@ void CheckPolyhedMesh(long ifc)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

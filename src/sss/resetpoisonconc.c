@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : resetpoisonconc.c                              */
@@ -58,3 +61,6 @@ void ResetPoisonConc()
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

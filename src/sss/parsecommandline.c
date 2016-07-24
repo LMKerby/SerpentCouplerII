@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : parsecommandline.c                             */
@@ -518,3 +521,6 @@ long ParseCommandLine(int argc, char **argv)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

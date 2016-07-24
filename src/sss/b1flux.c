@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : b1flux.c                                       */
@@ -750,3 +753,6 @@ long B1Flux(long gcu, long nmg, const double *flx0, const double *tot0,
 
 /*****************************************************************************/
 
+#ifdef __cplusplus 
+} 
+#endif 

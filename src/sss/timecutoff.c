@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : timecutoff.c                                   */
@@ -179,3 +182,6 @@ long TimeCutoff(long trk, long part, long *cell, double *dt, double *x,
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

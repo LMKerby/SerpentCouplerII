@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : printprogress.c                                */
@@ -89,3 +92,6 @@ void PrintProgress(long mat, long type)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

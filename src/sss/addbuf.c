@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : addbuf.c                                       */
@@ -184,3 +187,6 @@ void AddBuf(double val, double wgt, long ptr, long id, long idx, ...)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

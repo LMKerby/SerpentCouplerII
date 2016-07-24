@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : linkgcumaterials.c                             */
@@ -290,3 +293,6 @@ void LinkGCUMaterials(long uni, long gcu)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

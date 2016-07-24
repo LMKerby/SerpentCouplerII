@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : contribdet.c                                   */
@@ -121,3 +124,6 @@ void ContribDet(long part, long det1, long ptr, long idx0, long rbin0,
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

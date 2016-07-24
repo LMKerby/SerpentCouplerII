@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : surfacenormal.c                                */
@@ -187,3 +190,6 @@ void SurfaceNormal(long surf, double x, double y, double z,
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

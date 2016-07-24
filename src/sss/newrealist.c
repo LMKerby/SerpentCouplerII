@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : newrealist.c                                   */
@@ -450,3 +453,6 @@ void NewReaList(long mat, long mode)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

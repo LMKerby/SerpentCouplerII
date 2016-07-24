@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : makeenergygrid.c                               */
@@ -310,3 +313,6 @@ long MakeEnergyGrid(long ne, long i0, long lvl, long ptr,
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

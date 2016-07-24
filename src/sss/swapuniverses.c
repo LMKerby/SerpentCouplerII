@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : swapuniverses.c                                */
@@ -177,3 +180,6 @@ void SwapUniverses(long uni1, long uni2)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

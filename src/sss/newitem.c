@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : newitem.c                                      */
@@ -124,3 +127,6 @@ long NewItem(long root, long sz)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

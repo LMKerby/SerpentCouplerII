@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : materialtotals.c                               */
@@ -617,3 +620,6 @@ void MaterialTotals0(long mat)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

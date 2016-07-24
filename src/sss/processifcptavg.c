@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : processifcptavg.c                              */
@@ -425,3 +428,6 @@ void ProcessIFCPtAvg(long loc0, long update)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

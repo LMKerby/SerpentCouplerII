@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : maxsurfacedimensions.c                         */
@@ -608,3 +611,6 @@ void MaxSurfDimensions(long surf, double *xmin, double *xmax, double *ymin,
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

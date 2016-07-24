@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : clearinterfacestat.c                           */
@@ -90,3 +93,6 @@ void ClearInterfaceStat()
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : scorefission.c                                 */
@@ -498,3 +501,6 @@ void ScoreFission(long mat, long rea, double tnu, double dnu, double lambda,
 }
 
 /******************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

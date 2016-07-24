@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : allocprecdet.c                                 */
@@ -265,3 +268,6 @@ void AllocPrecDet()
 #endif
 
 }
+#ifdef __cplusplus 
+} 
+#endif 

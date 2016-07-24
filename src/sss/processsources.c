@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : processsources.c                               */
@@ -490,3 +493,6 @@ void ProcessSources()
 }  
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

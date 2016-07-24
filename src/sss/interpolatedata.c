@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : interpolatedata.c                              */
@@ -468,3 +471,6 @@ long InterpolateData(const double *EE0, double *f0, long np0,
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

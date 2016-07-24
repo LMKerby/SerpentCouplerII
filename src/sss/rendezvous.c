@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : rendezvous.c                                   */
@@ -301,3 +304,6 @@ void Rendezvous(long *nsrc0, double *wgt0)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : zaitoiso.c                                     */
@@ -100,3 +103,6 @@ char *ZAItoIso(long ZAI, long type)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

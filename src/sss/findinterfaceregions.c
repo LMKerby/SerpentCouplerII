@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : findinterfaceregions.c                         */
@@ -461,3 +464,6 @@ void FindInterfaceRegions(long loc0, long  uni, long lvl, long recu, double x0,
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

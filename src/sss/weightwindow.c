@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : weightwindow.c                                 */
@@ -217,3 +220,6 @@ long WeightWindow(long trk, long part, double x, double y, double z, double u,
 }
 
 /****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

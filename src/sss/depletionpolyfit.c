@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : depletionpolyfit.c                             */
@@ -334,3 +337,6 @@ void DepletionPolyFit(long dep, long step)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

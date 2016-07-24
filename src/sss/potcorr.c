@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : potcorr.c                                      */
@@ -72,3 +75,6 @@ double PotCorr(long nuc, double E, double kT)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : readrestartfile.c                              */
@@ -616,3 +619,6 @@ void ReadRestartFile(long mode)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : atoi.c                                         */
@@ -48,3 +51,6 @@ long AtoI(char *str, char *param, char *file, long line)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

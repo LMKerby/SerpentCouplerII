@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : setnormalization.c                             */
@@ -179,3 +182,6 @@ void SetNormalization(long dep)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

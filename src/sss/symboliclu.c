@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : symboliclu.c                                   */
@@ -234,3 +237,6 @@ struct ccsMatrix *SymbolicLU(struct ccsMatrix *cmat){
 
 }
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : processrelaxation.c                            */
@@ -238,3 +241,6 @@ void ProcessRelaxation() {
   /*************************************************************************/
 
 }
+#ifdef __cplusplus 
+} 
+#endif 

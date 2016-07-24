@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : getlinenumber.c                                */
@@ -53,3 +56,6 @@ long GetLineNumber(char *file, long imax)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

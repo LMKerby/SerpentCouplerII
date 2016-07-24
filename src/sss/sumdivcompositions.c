@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : sumdivcompositions.c                           */
@@ -195,3 +198,6 @@ void SumDivCompositions()
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

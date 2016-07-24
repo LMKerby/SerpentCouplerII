@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : processprecdet.c                               */
@@ -324,3 +327,6 @@ void ProcessPrecDet()
   fprintf(out, "<-- processprecdet.c\n\n");  
 #endif
 }
+#ifdef __cplusplus 
+} 
+#endif 

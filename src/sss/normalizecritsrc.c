@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : normalizecritsrc.c                             */
@@ -421,3 +424,6 @@ void NormalizeCritSrc()
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

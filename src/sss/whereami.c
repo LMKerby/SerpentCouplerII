@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : whereami.c                                     */
@@ -661,3 +664,6 @@ long WhereAmI(double x, double y, double z, double u, double v, double w,
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

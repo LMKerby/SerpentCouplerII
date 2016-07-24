@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : ludecomposition.c                              */
@@ -140,3 +143,6 @@ void LUdecomposition(long n, complex **A, complex *b, complex *x)
 }
 /*--------------------------------------------------------------------*/
 
+#ifdef __cplusplus 
+} 
+#endif 

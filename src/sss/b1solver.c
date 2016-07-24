@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : b1solver.c                                     */
@@ -1413,3 +1416,6 @@ void PrintB1Data(long nmg, double *flx0, complex *flx1,
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

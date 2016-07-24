@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : targetvelocity.c                               */
@@ -271,3 +274,6 @@ void TargetVelocity(long rea, double E0, double *Vx, double *Vy, double *Vz,
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : reactioncutoff.c                               */
@@ -187,3 +190,6 @@ void ReactionCutoff()
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

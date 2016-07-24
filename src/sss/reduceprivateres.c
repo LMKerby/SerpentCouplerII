@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : reduceprivateres.c                             */
@@ -61,3 +64,6 @@ void ReducePrivateRes()
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

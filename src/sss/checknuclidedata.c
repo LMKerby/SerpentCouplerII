@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : checknuclidedata.c                             */
@@ -1902,3 +1905,6 @@ void CheckNuclideData()
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

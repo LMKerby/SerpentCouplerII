@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : getparams.c                                    */
@@ -200,3 +203,6 @@ char **GetParams(char *w0, char *input, long *np0, long *i0, long min,
 
 /*****************************************************************************/
 
+#ifdef __cplusplus 
+} 
+#endif 

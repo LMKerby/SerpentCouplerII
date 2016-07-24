@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : readofheader.c                                 */
@@ -159,3 +162,6 @@ void ReadOFHeader(FILE *fp, long *type, long *sz, long *dim)
 
 
 
+#ifdef __cplusplus 
+} 
+#endif 

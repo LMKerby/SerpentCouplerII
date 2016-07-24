@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : dfsolver.c                                     */
@@ -399,3 +402,6 @@ void DFSolver(long ifCorn, long nG, long nJ, const double *ds0, double dc,
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

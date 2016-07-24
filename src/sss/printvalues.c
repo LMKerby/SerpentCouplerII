@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : printvalues.c                                  */
@@ -104,3 +107,6 @@ void PrintValues(FILE *fp, char *name, long param, long nv1, long nv2, long iu,
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

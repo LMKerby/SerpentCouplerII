@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : printtmsdiagnostics.c                          */
@@ -75,3 +78,6 @@ void PrintTMSDiagnostics()
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

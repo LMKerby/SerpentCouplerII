@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : samplesrcpoint.c                               */
@@ -797,3 +800,6 @@ long SampleSrcPoint(long id, long np, long idx)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : combineactinides.c                             */
@@ -308,3 +311,6 @@ void CombineActinides0(long ZAI, double *zai, long *sz)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

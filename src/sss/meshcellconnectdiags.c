@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : meshcellconnectdiags.c                         */
@@ -92,3 +95,6 @@ void MeshCellConnectDiags(long hex[8], long (*diags)[8], long celltype)
 
     }
 }
+#ifdef __cplusplus 
+} 
+#endif 

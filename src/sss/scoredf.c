@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : scoredf.c                                      */
@@ -265,3 +268,6 @@ void ScoreDF(double x0, double y0, double z0, double u, double v, double w,
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : printmvar.c                                    */
@@ -106,3 +109,6 @@ void PrintMVar(FILE *fp, long param)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

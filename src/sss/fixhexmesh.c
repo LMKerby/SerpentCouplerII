@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : fixhexmesh.c                                   */
@@ -346,3 +349,6 @@ void FixHexMesh(long ifc, long nfaces)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

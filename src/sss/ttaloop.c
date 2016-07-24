@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : ttaloop.c                                      */
@@ -128,3 +131,6 @@ void TTALoop (long iso, double t, long n, double *l, double B, double Pin,
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

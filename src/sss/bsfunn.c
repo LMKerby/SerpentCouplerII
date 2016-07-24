@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : bsfunn.c                                       */
@@ -141,3 +144,6 @@ void BsfunN(long nG, double *v, double *r, complex **T, complex **U,
 }
 
 /**************************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

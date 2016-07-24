@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : retrievecomposition.c                          */
@@ -117,3 +120,6 @@ void RetrieveComposition(long mat0, long idx0)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

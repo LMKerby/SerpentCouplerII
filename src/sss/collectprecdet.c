@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : collectprecdet.c                               */
@@ -93,3 +96,6 @@ void CollectPrecDet()
 	}
 
 }
+#ifdef __cplusplus 
+} 
+#endif 

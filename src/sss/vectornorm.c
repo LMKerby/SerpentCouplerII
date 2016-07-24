@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : vectorNorm.c                                   */
@@ -41,3 +44,6 @@ double vectorNorm(long n, complex *v){
   return nrm; 
 }
 /*--------------------------------------------------------------------*/
+#ifdef __cplusplus 
+} 
+#endif 

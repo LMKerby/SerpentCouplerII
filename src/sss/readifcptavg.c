@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : readifcptavg.c                                 */
@@ -282,3 +285,6 @@ void ReadIFCPtAvg(long loc0, long update)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

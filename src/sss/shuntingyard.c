@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : shuntingyard.c                                 */
@@ -108,3 +111,6 @@ void ShuntingYard(long cell, long *infix, long ni)
 
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

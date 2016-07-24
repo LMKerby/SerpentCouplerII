@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : putmeshidx.c                                   */
@@ -66,3 +69,6 @@ void PutMeshIdx(long msh, double val, long i, long j, long k)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

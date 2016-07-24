@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : interpolatenubar.c                             */
@@ -265,3 +268,6 @@ void InterpolateNubar(double *nubar, long rea)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

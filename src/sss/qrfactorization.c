@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : qrfactorization.c                              */
@@ -161,3 +164,6 @@ void QRfactorization(long n, complex **A, complex **Q, complex **R)
 /*--------------------------------------------------------------------*/
 
 
+#ifdef __cplusplus 
+} 
+#endif 

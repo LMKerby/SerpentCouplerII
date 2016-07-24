@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : calcmicrogroupxs.c                             */
@@ -497,3 +500,6 @@ void CalcMicroGroupXS()
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : setcoefcalc.c                                  */
@@ -235,3 +238,6 @@ long SetCoefCalc(long idx)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : processtmpdata.c                               */
@@ -200,3 +203,6 @@ void ProcessTmpData()
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

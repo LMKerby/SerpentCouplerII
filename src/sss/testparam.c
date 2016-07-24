@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : testparam.c                                    */
@@ -93,3 +96,6 @@ double TestParam(char *pname, char *fname, long line, char *val,
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

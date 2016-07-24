@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : reinitrng.c                                    */
@@ -71,3 +74,6 @@ unsigned long ReInitRNG(long n0)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : collectparalleldata.c                          */
@@ -158,3 +161,6 @@ void CollectParallelData()
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

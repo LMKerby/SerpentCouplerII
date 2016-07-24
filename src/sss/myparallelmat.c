@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : myparallelmat                                  */
@@ -56,3 +59,6 @@ long MyParallelMat(long mat, long mpi)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : processnuclides.c                              */
@@ -1325,3 +1328,6 @@ void ProcessNuclides()
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

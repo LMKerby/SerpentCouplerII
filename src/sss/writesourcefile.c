@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : writesourcefile.c                              */
@@ -711,3 +714,6 @@ void WriteSourceFile(long det, double x, double y, double z, double u,
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

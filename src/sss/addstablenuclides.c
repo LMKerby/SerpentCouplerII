@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : addstablenuclides.c                            */
@@ -192,3 +195,6 @@ void AddStableNuclides()
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

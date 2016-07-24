@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : timercpuval.c                                  */
@@ -42,3 +45,6 @@ double TimerCPUVal(long i)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

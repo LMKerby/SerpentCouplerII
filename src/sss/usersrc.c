@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : usersrc.c                                      */
@@ -155,3 +158,6 @@ void UserSrc(long src, double *x, double *y, double *z, double *u,  double *v,
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

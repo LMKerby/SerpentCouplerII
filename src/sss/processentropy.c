@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : processentropy.c                               */
@@ -65,3 +68,6 @@ void ProcessEntropy()
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

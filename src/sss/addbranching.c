@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : addbranching.c                                 */
@@ -1895,3 +1898,6 @@ void AddBranching(long nuc)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

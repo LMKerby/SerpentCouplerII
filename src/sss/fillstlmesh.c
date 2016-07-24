@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : fillstlmesh.c                                  */
@@ -159,3 +162,6 @@ double FillSTLMesh(long stl, long msh, double x0, double y0, double z0)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

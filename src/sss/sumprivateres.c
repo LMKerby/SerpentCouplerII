@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : sumprivateres.c                                */
@@ -63,3 +66,6 @@ double SumPrivateRes(long ptr)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : addnuclide.c                                   */
@@ -20,7 +23,7 @@
 
 /*****************************************************************************/
 
-long AddNuclide(char *zaid, long ZAI, char *lib, double T, long type, 
+long AddNuclide(char *zaid, long ZAI, char *lib, double T, long type,
 		long TMS)
 {
   long nuc, ace, ptr, Z, A;
@@ -32,7 +35,7 @@ long AddNuclide(char *zaid, long ZAI, char *lib, double T, long type,
     {
       /* Tässä oletetaan että jos nuklidi on lisätty jostain ketjusta, sen */
       /* zaid == NULL, jolloin asetetaan flägi */
-      
+
       if ((ace > VALID_PTR) && (zaid == NULL))
 	SetOption(ace + NUCLIDE_TYPE_FLAGS, NUCLIDE_FLAG_NEW_DAUGHTERS);
 
@@ -46,13 +49,13 @@ long AddNuclide(char *zaid, long ZAI, char *lib, double T, long type,
   ace = -ace;
 
   /* Reset memory size */
-      
+
   mem = RDB[DATA_TOTAL_BYTES];
 
   /* Avoid compiler warning */
 
   nuc = -1;
-  
+
   /* Check type */
 
   if ((long)ACE[ace + ACE_TYPE] == NUCLIDE_TYPE_TRANSMUXS)
@@ -68,7 +71,7 @@ long AddNuclide(char *zaid, long ZAI, char *lib, double T, long type,
       nuc = NewItem(DATA_PTR_NUC0, NUCLIDE_BLOCK_SIZE);
 
       /* Copy values */
-      
+
       WDB[nuc + NUCLIDE_PTR_NAME] = ACE[ace + ACE_PTR_NAME];
       WDB[nuc + NUCLIDE_TYPE] = ACE[ace + ACE_TYPE];
 
@@ -79,33 +82,33 @@ long AddNuclide(char *zaid, long ZAI, char *lib, double T, long type,
 	      GetText(nuc + NUCLIDE_PTR_NAME));
 
       /* ZAI */
-      
+
       WDB[nuc + NUCLIDE_ZAI] = ACE[ace + ACE_ZAI];
-	  
+
       /* ZA */
-	  
+
       WDB[nuc + NUCLIDE_ZA] = ACE[ace + ACE_ZA];
-      
+
       /* Z */
-      
+
       WDB[nuc + NUCLIDE_Z] = ACE[ace + ACE_ZA]/1000.0;
-  
+
       /* Check A */
 
       if (ACE[ace + ACE_ZA] - 1000.0*RDB[nuc + NUCLIDE_Z] != 0.0)
 	Die(FUNCTION_NAME, "Non-zero A for photon interaction data");
 
       /* Library ID */
-      
+
       if (lib == NULL)
 	WDB[nuc + NUCLIDE_PTR_LIB_ID] = ACE[ace + ACE_PTR_LIB_ID];
       else
 	WDB[nuc + NUCLIDE_PTR_LIB_ID] = (double)PutText(lib);
 
       /* Pointer to ACE data */
-      
+
       WDB[nuc + NUCLIDE_PTR_ACE] = (double)ace;
-      WDB[nuc + NUCLIDE_PTR_DECAY_ACE] = NULLPTR;      
+      WDB[nuc + NUCLIDE_PTR_DECAY_ACE] = NULLPTR;
 
       /* Read ACE data */
 
@@ -127,13 +130,13 @@ long AddNuclide(char *zaid, long ZAI, char *lib, double T, long type,
       /***********************************************************************/
 
       /***** Create transport or dosimetry nuclide ***************************/
-	  
+
       /* Create new block */
 
       nuc = NewItem(DATA_PTR_NUC0, NUCLIDE_BLOCK_SIZE);
 
       /* Copy name */
-      
+
       WDB[nuc + NUCLIDE_PTR_NAME] = ACE[ace + ACE_PTR_NAME];
 
       /* Set type to DBRC and set flag or copy type from data */
@@ -162,18 +165,18 @@ long AddNuclide(char *zaid, long ZAI, char *lib, double T, long type,
       if ((long)ACE[ace + ACE_TYPE] == NUCLIDE_TYPE_SAB)
 	{
 	  /* ZAI */
-      
+
 	  WDB[nuc + NUCLIDE_ZAI] = 10.0*ACE[ace + ACE_BOUND_ZA];
-      
+
 	  /* ZA */
-      
+
 	  WDB[nuc + NUCLIDE_ZA] = ACE[ace + ACE_BOUND_ZA];
-      
+
 	  /* Z, A and I */
-	  
+
 	  Z = (long)(ACE[ace + ACE_BOUND_ZA]/1000.0);
 	  A = (long)ACE[ace + ACE_BOUND_ZA] - 1000*Z;
-	  
+
 	  WDB[nuc + NUCLIDE_Z] = (double)Z;
 	  WDB[nuc + NUCLIDE_A] = (double)A;
 	  WDB[nuc + NUCLIDE_I] = 0;
@@ -181,25 +184,25 @@ long AddNuclide(char *zaid, long ZAI, char *lib, double T, long type,
       else
 	{
 	  /* ZAI */
-      
+
 	  WDB[nuc + NUCLIDE_ZAI] = ACE[ace + ACE_ZAI];
-	
+
 	  /* ZA */
-	  
+
 	  WDB[nuc + NUCLIDE_ZA] = ACE[ace + ACE_ZA];
-	  
+
 	  /* Z, A and I */
-	  
+
 	  Z = (long)(ACE[ace + ACE_ZA]/1000.0);
 	  A = (long)ACE[ace + ACE_ZA] - 1000*Z;
-	  
+
 	  WDB[nuc + NUCLIDE_Z] = (double)Z;
 	  WDB[nuc + NUCLIDE_A] = (double)A;
 	  WDB[nuc + NUCLIDE_I] = ACE[ace + ACE_I];
-	}      
-      
+	}
+
       /* Temperature */
-      
+
       if (T < 0.0)
 	WDB[nuc + NUCLIDE_TEMP] = ACE[ace + ACE_TEMP];
       else
@@ -220,21 +223,21 @@ long AddNuclide(char *zaid, long ZAI, char *lib, double T, long type,
       WDB[nuc + NUCLIDE_TMS_MAX_TEMP] = -INFTY;
 
       /* Library ID */
-      
+
       if (lib == NULL)
 	WDB[nuc + NUCLIDE_PTR_LIB_ID] = ACE[ace + ACE_PTR_LIB_ID];
       else
 	WDB[nuc + NUCLIDE_PTR_LIB_ID] = (double)PutText(lib);
 
       /* Pointer to ACE data */
-      
+
       WDB[nuc + NUCLIDE_PTR_ACE] = (double)ace;
-      WDB[nuc + NUCLIDE_PTR_DECAY_ACE] = NULLPTR;      
+      WDB[nuc + NUCLIDE_PTR_DECAY_ACE] = NULLPTR;
 
       /* Read ACE data */
 
       ReadACEFile(nuc);
-      
+
       /* Set DBRC type to transport */
 
       if (type == NUCLIDE_TYPE_DBRC)
@@ -246,12 +249,12 @@ long AddNuclide(char *zaid, long ZAI, char *lib, double T, long type,
 	SetOption(nuc + NUCLIDE_TYPE_FLAGS, NUCLIDE_FLAG_DOSIMETRY_DATA);
       else
 	SetOption(nuc + NUCLIDE_TYPE_FLAGS, NUCLIDE_FLAG_TRANSPORT_DATA);
-	      
+
       /* Find decay data */
 
-      if (((ptr = FindNuclideData(NULL, (long)RDB[nuc + NUCLIDE_ZAI], 
-				  GetText(nuc + NUCLIDE_PTR_LIB_ID), 
-				  RDB[nuc + NUCLIDE_TEMP], 
+      if (((ptr = FindNuclideData(NULL, (long)RDB[nuc + NUCLIDE_ZAI],
+				  GetText(nuc + NUCLIDE_PTR_LIB_ID),
+				  RDB[nuc + NUCLIDE_TEMP],
 				  NUCLIDE_TYPE_DECAY, TMS)) < 0) &&
 	  ((long)RDB[nuc + NUCLIDE_TYPE] != NUCLIDE_TYPE_DOSIMETRY))
 	{
@@ -260,19 +263,19 @@ long AddNuclide(char *zaid, long ZAI, char *lib, double T, long type,
 	  ace = -ptr;
 
 	  /* Check type (lambda = -1 for structural nuclides) */
-	  
+
 	  if (ACE[ace + ACE_LAMBDA] > -1.0)
 	    {
 	      /* Pointer to decay data */
-	      
+
 	      WDB[nuc + NUCLIDE_PTR_DECAY_ACE] = (double)ace;
-	      
+
 	      /* Set data flag */
-	      
+
 	      SetOption(nuc + NUCLIDE_TYPE_FLAGS, NUCLIDE_FLAG_DECAY_DATA);
-	      
+
 	      /* Process decay data */
-	      
+
 	      ProcessDecayData(nuc);
 	    }
 	}
@@ -283,20 +286,20 @@ long AddNuclide(char *zaid, long ZAI, char *lib, double T, long type,
 	  if ((ace = (long)RDB[ptr + NUCLIDE_PTR_DECAY_ACE]) > 0)
 	    {
 	      /* Check lambda */
-	      
+
 	      if (ACE[ace + ACE_LAMBDA] < 0.0)
 		Die(FUNCTION_NAME, "lambda < 0");
-	      
+
 	      /* Pointer to decay data */
-	      
+
 	      WDB[nuc + NUCLIDE_PTR_DECAY_ACE] = (double)ace;
-	      
+
 	      /* Set data flag */
-	      
+
 	      SetOption(nuc + NUCLIDE_TYPE_FLAGS, NUCLIDE_FLAG_DECAY_DATA);
-	      
+
 	      /* Process decay data */
-	      
+
 	      ProcessDecayData(nuc);
 	    }
 	}
@@ -308,35 +311,35 @@ long AddNuclide(char *zaid, long ZAI, char *lib, double T, long type,
       /***********************************************************************/
 
       /***** Create decay nuclide ********************************************/
-	  
+
       /* Create new block */
 
       nuc = NewItem(DATA_PTR_NUC0, NUCLIDE_BLOCK_SIZE);
 
       /* Copy values */
-      
+
       WDB[nuc + NUCLIDE_PTR_NAME] = ACE[ace + ACE_PTR_NAME];
       WDB[nuc + NUCLIDE_TYPE] = (double)NUCLIDE_TYPE_DECAY;
-      
+
       /* ZAI */
-      
+
       WDB[nuc + NUCLIDE_ZAI] = ACE[ace + ACE_ZAI];
-      
+
       /* ZA */
-      
+
       WDB[nuc + NUCLIDE_ZA] = ACE[ace + ACE_ZA];
-      
+
       /* Z, A and I */
-      
+
       Z = (long)(ACE[ace + ACE_ZA]/1000.0);
       A = (long)ACE[ace + ACE_ZA] - 1000*Z;
-      
+
       WDB[nuc + NUCLIDE_Z] = (double)Z;
       WDB[nuc + NUCLIDE_A] = (double)A;
       WDB[nuc + NUCLIDE_I] = ACE[ace + ACE_I];
-      
+
       /* Temperature */
-      
+
       if (T < 0.0)
 	WDB[nuc + NUCLIDE_TEMP] = ACE[ace + ACE_TEMP];
       else
@@ -357,14 +360,14 @@ long AddNuclide(char *zaid, long ZAI, char *lib, double T, long type,
       WDB[nuc + NUCLIDE_TMS_MAX_TEMP] = -INFTY;
 
       /* Library ID */
-      
+
       if (lib == NULL)
 	WDB[nuc + NUCLIDE_PTR_LIB_ID] = ACE[ace + ACE_PTR_LIB_ID];
       else
 	WDB[nuc + NUCLIDE_PTR_LIB_ID] = PutText(lib);
 
       /* Pointer to reaction data */
-      
+
       WDB[nuc + NUCLIDE_PTR_ACE] = NULLPTR;
 
       /* Reset toxicities */
@@ -373,7 +376,7 @@ long AddNuclide(char *zaid, long ZAI, char *lib, double T, long type,
       WDB[nuc + NUCLIDE_SPEC_INH_TOX] = -1.0;
 
       /* Check type */
-      
+
       if (ACE[ace + ACE_LAMBDA] < 0)
 	{
 	  /* Structural type, put masses only */
@@ -384,21 +387,21 @@ long AddNuclide(char *zaid, long ZAI, char *lib, double T, long type,
       else
 	{
 	  /* Pointer to decay data */
-	  
-	  WDB[nuc + NUCLIDE_PTR_DECAY_ACE] = (double)ace;  
-	  
+
+	  WDB[nuc + NUCLIDE_PTR_DECAY_ACE] = (double)ace;
+
 	  /* Process decay data */
-	  
+
 	  ProcessDecayData(nuc);
 
 	  /* Set flag */
-	  
+
 	  SetOption(nuc + NUCLIDE_TYPE_FLAGS, NUCLIDE_FLAG_DECAY_DATA);
 	}
 
       /* Read additional transmutation cross section data */
 
-      if ((ace = FindNuclideData(NULL, (long)RDB[nuc + NUCLIDE_ZAI], NULL, 
+      if ((ace = FindNuclideData(NULL, (long)RDB[nuc + NUCLIDE_ZAI], NULL,
 				 -1.0, NUCLIDE_TYPE_TRANSMUXS, TMS)) < 0)
 	{
 	  /* Convert pointer */
@@ -406,7 +409,7 @@ long AddNuclide(char *zaid, long ZAI, char *lib, double T, long type,
 	  ace = -ace;
 
 	  /* Pointer to ACE data */
-      
+
 	  WDB[nuc + NUCLIDE_PTR_ACE] = (double)ace;
 
 	  /* Add flag  */
@@ -417,7 +420,7 @@ long AddNuclide(char *zaid, long ZAI, char *lib, double T, long type,
 
 	  ReadACEFile(nuc);
 	}
-      
+
       /***********************************************************************/
     }
 
@@ -438,11 +441,11 @@ long AddNuclide(char *zaid, long ZAI, char *lib, double T, long type,
   ReactionCount();
 
   /* Set memory size */
-      
+
   WDB[nuc + NUCLIDE_MEMSIZE] = RDB[DATA_TOTAL_BYTES] - mem;
 
   /* Print data */
-  
+
   PrintNuclideData(nuc, NO);
 
   /* Put large number to level */
@@ -465,3 +468,6 @@ long AddNuclide(char *zaid, long ZAI, char *lib, double T, long type,
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

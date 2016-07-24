@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : thingrid.c                                     */
@@ -75,3 +78,6 @@ double *ThinGrid(double *E, long *ne0, double tol)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

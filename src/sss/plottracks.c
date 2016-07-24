@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : plottracks.c                                   */
@@ -686,3 +689,6 @@ void DrawTail(long gpl, gdImagePtr im, long ncol, double **R, long idx,
 
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

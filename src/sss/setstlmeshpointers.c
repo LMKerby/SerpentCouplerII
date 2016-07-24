@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : setstlmeshpointers.c                           */
@@ -124,3 +127,6 @@ void SetSTLMeshPointers(long msh)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

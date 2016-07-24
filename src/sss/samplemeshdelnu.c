@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : SampleMeshDelnu.c                              */
@@ -560,3 +563,6 @@ void SampleMeshDelnu(long id, long np, long idx)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

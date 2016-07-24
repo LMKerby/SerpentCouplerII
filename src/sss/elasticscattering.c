@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : elasticscattering.c                            */
@@ -224,3 +227,6 @@ void ElasticScattering(long mat, long rea, double *E, double *u, double *v,
 
 
 
+#ifdef __cplusplus 
+} 
+#endif 

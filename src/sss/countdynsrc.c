@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : countdynsrc.c                                  */
@@ -82,3 +85,6 @@ void CountDynSrc()
 #endif
 
 }
+#ifdef __cplusplus 
+} 
+#endif 

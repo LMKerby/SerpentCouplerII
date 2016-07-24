@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : meshcellrotatelists.c                          */
@@ -181,3 +184,6 @@ void MeshCellRotateLists(long hex[8], long (*initFaces)[4], long *hexfaces,
     }
 
 }
+#ifdef __cplusplus 
+} 
+#endif 

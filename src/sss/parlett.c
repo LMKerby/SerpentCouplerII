@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : parlett.c                                      */
@@ -154,3 +157,6 @@ void parlett(long n, complex *d, complex **T, complex **U, complex **F)
 }
 
 /*--------------------------------------------------------------------*/
+#ifdef __cplusplus 
+} 
+#endif 

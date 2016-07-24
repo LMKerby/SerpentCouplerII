@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : normalizedynsrc.c                              */
@@ -486,3 +489,6 @@ long NormalizeDynSrc()
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

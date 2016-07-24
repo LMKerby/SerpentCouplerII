@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : materialburnup.c                               */
@@ -255,3 +258,6 @@ void MaterialBurnup(long mat, double *Nbos, double *Neos, double t1,
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

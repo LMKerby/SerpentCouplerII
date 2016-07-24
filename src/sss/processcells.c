@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : processcells.c                                 */
@@ -394,3 +397,6 @@ void Testaa(long cell, long *infix, long ni)
   
   fprintf(out, "result:   %ld\n", stack[0]);
 }
+#ifdef __cplusplus 
+} 
+#endif 

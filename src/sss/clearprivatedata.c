@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : clearprivatedata.c                             */
@@ -44,3 +47,6 @@ void ClearPrivateData(long ptr)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

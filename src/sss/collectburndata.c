@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : collectburndata.c                              */
@@ -243,3 +246,6 @@ void CollectBurnData()
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

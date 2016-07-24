@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : readifcfblims.c                                */
@@ -428,3 +431,6 @@ void ReadIFCFBLims(FILE *fp, long loc1, long update)
   WDB[loc2 + FUEP_EMAX] = emax;
 
 }
+#ifdef __cplusplus 
+} 
+#endif 

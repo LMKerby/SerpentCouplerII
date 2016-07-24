@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : cleartransmuxs.c                               */
@@ -64,3 +67,6 @@ void ClearTransmuXS()
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

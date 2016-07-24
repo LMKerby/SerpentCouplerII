@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : ttb.c                                          */
@@ -229,3 +232,6 @@ double TTB(long mat, long part, double Te, double x, double y, double z, double 
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

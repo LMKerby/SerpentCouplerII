@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : allocprivatedata.c                             */
@@ -188,3 +191,6 @@ long AllocPrivateData(long sz, long type)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

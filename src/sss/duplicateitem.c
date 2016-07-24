@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : duplicateitem.c                                */
@@ -73,3 +76,6 @@ long DuplicateItem(long ptr)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

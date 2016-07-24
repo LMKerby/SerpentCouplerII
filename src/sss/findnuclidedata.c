@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : findnuclidedata.c                              */
@@ -374,3 +377,6 @@ long FindNuclideData(char *zaid, long ZAI, char *lib, double T, long type,
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : atof.c                                         */
@@ -64,3 +67,6 @@ double AtoF(char *str, char *param, char *file, long line)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

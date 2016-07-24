@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : listptr.c                                      */
@@ -51,3 +54,6 @@ long ListPtr(long ptr, long idx)
 #endif
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

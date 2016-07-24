@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : processmsr.c                                   */
@@ -456,3 +459,6 @@ void LoopFlow(long mat, long mat0, long *idx)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

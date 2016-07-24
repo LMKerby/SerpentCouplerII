@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : readfissionyields.c                            */
@@ -1096,3 +1099,6 @@ void ReadFissionYields()
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

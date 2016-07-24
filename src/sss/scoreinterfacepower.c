@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : scoreinterfacepower.c                          */
@@ -291,3 +294,6 @@ void ScoreInterfacePower(double fissE, double wgt, double x, double y,
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : removevoidcells.c                              */
@@ -61,3 +64,6 @@ void RemoveVoidCells()
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

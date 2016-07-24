@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : processedistributions.c                        */
@@ -1354,3 +1357,6 @@ void ProcessEDistributions(long rea, long prec)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

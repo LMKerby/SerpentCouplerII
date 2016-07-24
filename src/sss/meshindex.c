@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : meshindex.c                                    */
@@ -343,3 +346,6 @@ long MeshIndex(long msh, double x, double y, double z)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

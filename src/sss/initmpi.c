@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : initmpi.c                                      */
@@ -59,3 +62,6 @@ void InitMPI(int argc, char **argv)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

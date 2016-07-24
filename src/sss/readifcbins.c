@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : readifcbins.c                                  */
@@ -45,3 +48,6 @@ long ReadIFCBins(long np, FILE *fp, double min, long update)
   return ptr0;
 
 }
+#ifdef __cplusplus 
+} 
+#endif 

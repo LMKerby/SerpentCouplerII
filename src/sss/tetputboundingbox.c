@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : fixhexmesh.c                                   */
@@ -86,3 +89,6 @@ void TetPutBoundingBox(long ncgns, long pointlist, long pts[4])
     WDB[ncgns + IFC_TET_MSH_ZMAX]   = RDB[pts[3] + 2];      
 
 }
+#ifdef __cplusplus 
+} 
+#endif 

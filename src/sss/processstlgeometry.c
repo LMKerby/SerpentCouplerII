@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : processstlgeometry.c                           */
@@ -722,3 +725,6 @@ void ProcessSTLGeometry()
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

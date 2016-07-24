@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : hexrotatecell.c                                */
@@ -119,3 +122,6 @@ void HexRotateCell(long *hex, long (*diags)[8])
 
 }
 
+#ifdef __cplusplus 
+} 
+#endif 

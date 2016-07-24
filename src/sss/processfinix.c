@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : processfinix.c                                 */
@@ -220,3 +223,6 @@ void ProcessFinix()
 #endif
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

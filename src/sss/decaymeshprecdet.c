@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : decaymeshprecdet.c                             */
@@ -233,3 +236,6 @@ void DecayMeshPrecDet()
 #endif
 
 }
+#ifdef __cplusplus 
+} 
+#endif 

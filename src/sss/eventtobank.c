@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : eventtobank.c                                  */
@@ -39,3 +42,6 @@ void EventToBank(long ptr)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

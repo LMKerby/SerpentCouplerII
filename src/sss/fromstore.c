@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : fromstore.c                                    */
@@ -66,3 +69,6 @@ long FromStore(long id, long eoi)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

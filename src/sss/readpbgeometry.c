@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : readpbgeometry.c                               */
@@ -163,3 +166,6 @@ void ReadPBGeometry()
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

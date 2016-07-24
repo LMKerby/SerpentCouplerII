@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : testasciifile.c                                */
@@ -58,3 +61,6 @@ long TestASCIIFile(char *fname)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

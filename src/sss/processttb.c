@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : processttb.c                                   */
@@ -986,3 +989,6 @@ static double TTBInterp(double *x, double *y, long n, double x1, long type) {
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

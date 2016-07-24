@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : applygcsymmetries.c                            */
@@ -565,3 +568,6 @@ void ApplyGCSymmetries(long gcu)
 
 /*****************************************************************************/
 
+#ifdef __cplusplus 
+} 
+#endif 

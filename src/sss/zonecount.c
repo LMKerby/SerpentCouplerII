@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : zonecount.c                                    */
@@ -506,3 +509,6 @@ void ZoneCount(long uni, long lvl, long recu)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

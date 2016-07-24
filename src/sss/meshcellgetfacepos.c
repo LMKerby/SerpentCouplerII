@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : meshcellgetfacepos.c                           */
@@ -265,3 +268,6 @@ void MeshCellGetFacePos(long *pos, long facedirection, long celltype)
       
     }
 }
+#ifdef __cplusplus 
+} 
+#endif 

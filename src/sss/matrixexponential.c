@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : matrixexponential.c                            */
@@ -413,3 +416,6 @@ double *MatrixExponential(struct ccsMatrix *A, double *N0, double t)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

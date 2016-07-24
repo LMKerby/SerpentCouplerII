@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : processreactionlists.c                         */
@@ -1001,3 +1004,6 @@ void ProcessReactionLists0(long mat)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

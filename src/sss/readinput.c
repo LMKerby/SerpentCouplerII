@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : readinput.c                                    */
@@ -10507,3 +10510,6 @@ void ReadInput(char *inputfile)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

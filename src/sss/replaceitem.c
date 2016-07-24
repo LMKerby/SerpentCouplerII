@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : replaceitem.c                                  */
@@ -44,3 +47,6 @@ void ReplaceItem(long ptr1, long ptr2)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

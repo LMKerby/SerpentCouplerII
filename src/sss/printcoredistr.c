@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : printcoredistr.c                               */
@@ -387,3 +390,6 @@ void PrintCoreDistr()
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

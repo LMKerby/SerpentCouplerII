@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : isotopefractions.c                             */
@@ -260,3 +263,6 @@ void IsotopeFractions(long mat)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

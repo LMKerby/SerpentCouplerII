@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : otfsabscattering.c                             */
@@ -434,3 +437,6 @@ void OTFSabScattering(long rea, double *E, double *u, double *v, double *w,
 
 /*****************************************************************************/
 
+#ifdef __cplusplus 
+} 
+#endif 

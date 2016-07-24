@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : nextreaction.c                                 */
@@ -88,3 +91,6 @@ long NextReaction(long loc0, long *rea, double *adens, double *Emin,
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

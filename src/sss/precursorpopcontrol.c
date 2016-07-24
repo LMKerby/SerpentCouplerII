@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : precursorpopcontrol.c                          */
@@ -567,3 +570,6 @@ void PrecursorPopControl()
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

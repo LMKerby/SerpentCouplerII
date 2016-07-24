@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : processuresdata.c                              */
@@ -530,3 +533,6 @@ void ProcessUresData(long nuc)
 
 
 
+#ifdef __cplusplus 
+} 
+#endif 

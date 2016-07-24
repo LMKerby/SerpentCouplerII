@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : checkduplicates.c                              */
@@ -673,3 +676,6 @@ void CheckDuplicates()
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : sampleendflaw.c                                */
@@ -1397,3 +1400,6 @@ void SampleENDFLaw(long rea, long erg, double Ein, double *Eout, double *mu,
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

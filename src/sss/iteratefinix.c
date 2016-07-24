@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : iteratefinix.c                                 */
@@ -103,3 +106,6 @@ void IterateFinix()
 #endif 
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

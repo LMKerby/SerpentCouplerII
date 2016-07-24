@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : printnuclidedata.c                             */
@@ -359,3 +362,6 @@ void PrintNuclideData(long nuc, long all)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

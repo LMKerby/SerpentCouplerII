@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : createmesh.c                                   */
@@ -354,3 +357,6 @@ long CreateMesh(long type, long cont, long dtype, long nx, long ny, long nz,
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

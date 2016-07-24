@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : readofbatches.c                                */
@@ -126,3 +129,6 @@ void ReadOFBatches(long loc0)
 
 
 
+#ifdef __cplusplus 
+} 
+#endif 

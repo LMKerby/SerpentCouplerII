@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : symmetryboundary.c                             */
@@ -166,3 +169,6 @@ double SymmetryBoundary(long sym, double x, double y, double z,
 }
 
 /****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

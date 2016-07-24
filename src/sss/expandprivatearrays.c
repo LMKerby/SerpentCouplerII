@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : expandprivatearrays.c                          */
@@ -33,3 +36,6 @@ void ExpandPrivateArrays()
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

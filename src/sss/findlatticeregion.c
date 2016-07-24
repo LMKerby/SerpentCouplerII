@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : findlatticeregion.c                            */
@@ -653,3 +656,6 @@ long FindLatticeRegion(long lat, long lvl, double *x, double *y, double *z,
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

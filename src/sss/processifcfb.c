@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : processifcfb.c                                 */
@@ -781,3 +784,6 @@ void ProcessIFCFB(long loc0, long update)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : ccsmatrixcolspace.c                            */
@@ -78,3 +81,6 @@ void ccsMatrixColSpace(struct ccsMatrix *cmat, long i, long rs)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

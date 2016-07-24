@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : addsortitem.c                                  */
@@ -157,3 +160,6 @@ void AddSortItem(long root, long pos, long new, long param, long mode)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

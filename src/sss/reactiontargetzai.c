@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : reactiontargetzai.c                            */
@@ -598,3 +601,6 @@ long ReactionTargetZAI(long rea)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

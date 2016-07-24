@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : clearmicrogroupxs.c                            */
@@ -817,3 +820,6 @@ void ClearMicroGroupXS()
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

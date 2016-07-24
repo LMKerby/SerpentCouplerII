@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : collectdyndata.c                               */
@@ -91,3 +94,6 @@ void  CollectDynData()
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

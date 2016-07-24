@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : readtextfile.c                                 */
@@ -174,3 +177,6 @@ char *ReadTextFile(char *file)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

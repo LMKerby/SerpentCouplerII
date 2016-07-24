@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : readifcfunc.c                                  */
@@ -161,3 +164,6 @@ void ReadIFCFunc(long loc0, long update)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

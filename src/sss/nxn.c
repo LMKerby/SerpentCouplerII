@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : nxn.c                                          */
@@ -165,3 +168,6 @@ void Nxn(long rea, long part, double *E0, double x, double y, double z,
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : setoption.c                                    */
@@ -32,3 +35,6 @@ void SetOption(long ptr, long opt)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

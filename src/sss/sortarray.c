@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : sortarray.c                                    */
@@ -56,3 +59,6 @@ void SortArray(double *vec, long sz)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

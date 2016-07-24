@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : signalexternal.c                               */
@@ -153,3 +156,6 @@ void SignalExternal(int sigout)
 
   return;
 }
+#ifdef __cplusplus 
+} 
+#endif 

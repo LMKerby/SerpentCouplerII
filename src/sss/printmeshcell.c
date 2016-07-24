@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : printmeshcell.c                                */
@@ -99,3 +102,6 @@ void  PrintMeshCell(long hex[8], long celltype)
     }
 
 }
+#ifdef __cplusplus 
+} 
+#endif 

@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : comparestr.c                                   */
@@ -35,3 +38,6 @@ long CompareStr(long ptr1, long ptr2)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : burnupcycle.c                                  */
@@ -473,3 +476,6 @@ void BleedFluxes()
 
 }
 
+#ifdef __cplusplus 
+} 
+#endif 

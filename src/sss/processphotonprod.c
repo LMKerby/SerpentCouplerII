@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : processphotonprod.c                            */
@@ -1123,3 +1126,6 @@ void ProcessPhotonProd(long nuc)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

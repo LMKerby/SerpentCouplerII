@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : recoildet.c                                    */
@@ -117,3 +120,6 @@ void RecoilDet(long mat, double dE0, double x0, double y0, double z0,
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

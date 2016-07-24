@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : polarangle.c                                   */
@@ -55,3 +58,6 @@ double PolarAngle(double x, double y)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

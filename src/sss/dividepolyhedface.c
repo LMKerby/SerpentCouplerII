@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : dividepolyhedface.c                            */
@@ -794,3 +797,6 @@ void DividePolyhedFace(long ifc, long cidx, long fidx, long side, long np,
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

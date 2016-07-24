@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : trapz.c                                        */
@@ -57,3 +60,6 @@ complex trapz(long n, double *t, complex *F)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : bankstostore.c                                 */
@@ -97,3 +100,6 @@ void BanksToStore()
    }
   /*printf("\n");*/
 }
+#ifdef __cplusplus 
+} 
+#endif 

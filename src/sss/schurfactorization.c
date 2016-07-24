@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : schurfactorization.c                           */
@@ -238,3 +241,6 @@ void schurFactorization(long n, complex **A, complex **T, complex **U)
 }
 /*--------------------------------------------------------------------*/
 
+#ifdef __cplusplus 
+} 
+#endif 

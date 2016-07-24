@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : ccsmatrixisort.c                               */
@@ -73,3 +76,6 @@ void ccsMatrixIsort(struct ccsMatrix *cmat)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : processcellmesh.c                              */
@@ -142,3 +145,6 @@ void ProcessCellMesh()
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : polysameface.c                                 */
@@ -35,3 +38,6 @@ long PolySameFace(long *face0, long *face1, long np)
   return YES;
 
 }
+#ifdef __cplusplus 
+} 
+#endif 

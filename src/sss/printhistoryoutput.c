@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : printhistoryoutput.c                           */
@@ -175,3 +178,6 @@ void PrintHistoryOutput()
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

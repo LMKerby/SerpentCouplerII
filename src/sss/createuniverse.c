@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : createuniverse.c                               */
@@ -569,3 +572,6 @@ long CreateUniverse(long loc0, char *name, long level)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

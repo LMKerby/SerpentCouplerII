@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : Addchains.c                                    */
@@ -105,3 +108,6 @@ void AddChains(long mat, long nuc, long lvl)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

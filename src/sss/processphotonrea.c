@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : processphotonrea.c                             */
@@ -95,3 +98,6 @@ void ProcessPhotonRea(long rea) {
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

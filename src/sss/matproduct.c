@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : matProduct.c                                   */
@@ -55,3 +58,6 @@ void matProduct(long n, long m, long p, complex **A, complex **B, complex **AB)
 
 
 
+#ifdef __cplusplus 
+} 
+#endif 

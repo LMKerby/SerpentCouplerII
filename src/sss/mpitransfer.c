@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : mpitransfer.c                                  */
@@ -127,3 +130,6 @@ void MPITransfer(double *dat, double *buf, long sz, long root, long meth)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

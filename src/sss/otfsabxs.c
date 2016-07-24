@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : otfsabxs.c                                     */
@@ -202,3 +205,6 @@ double OTFSabXS(long rea, double E, double T, long id){
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

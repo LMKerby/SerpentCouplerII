@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : macroxs.c                                      */
@@ -286,3 +289,6 @@ double MacroXS(long rea0, double E, long id)
 }
 
 /******************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

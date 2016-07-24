@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : calculateactivities.c                          */
@@ -326,3 +329,6 @@ void CalculateActivities()
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : storecomposition.c                             */
@@ -122,3 +125,6 @@ void StoreComposition(long mat, double bu, double days)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

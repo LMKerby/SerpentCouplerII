@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : dopplerbroad.c                                 */
@@ -404,3 +407,6 @@ long *find_limits(long L0, long NES, double T, double Td, double awr,
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

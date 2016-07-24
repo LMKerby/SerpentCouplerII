@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : usersurf.c                                     */
@@ -192,3 +195,6 @@ void UserSurf(long part, long np, const double *params, double *xmin,
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

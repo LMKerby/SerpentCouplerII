@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : scoresurf.c                                    */
@@ -74,3 +77,6 @@ void ScoreSurf(long part, double *x0, double *y0, double *z0, double x,
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

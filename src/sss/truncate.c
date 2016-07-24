@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : truncate.c                                     */
@@ -81,3 +84,6 @@ double Truncate(double x0, long prec)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

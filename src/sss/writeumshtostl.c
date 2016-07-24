@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : writeumshtostl.c                               */
@@ -217,3 +220,6 @@ void WriteUMSHtoSTL()
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

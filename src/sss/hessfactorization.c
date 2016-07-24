@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : hessFactorization.c                            */
@@ -190,3 +193,6 @@ void hessFactorization(long n, complex **A, complex **P, complex **H)
 
 
 
+#ifdef __cplusplus 
+} 
+#endif 

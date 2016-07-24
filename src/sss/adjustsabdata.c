@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : adjustsabdata.c                                */
@@ -241,3 +244,6 @@ void AdjustSabData(long nuc)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

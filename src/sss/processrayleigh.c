@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : processrayleigh.c                              */
@@ -244,3 +247,6 @@ static void CumLogIntegral(const double *x, const double *y, double *F,
 
 /*****************************************************************************/
 
+#ifdef __cplusplus 
+} 
+#endif 

@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : gaussiansubst.c                                */
@@ -82,3 +85,6 @@ long GaussianSubst(struct ccsMatrix *lu, complex *b, complex *x, complex *diag)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : tta.c                                          */
@@ -87,3 +90,6 @@ double *TTA(struct ccsMatrix *A, double *N0, double t)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

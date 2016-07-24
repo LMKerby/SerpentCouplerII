@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : eventfrombank.c                                */
@@ -56,3 +59,6 @@ long EventFromBank(long part)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

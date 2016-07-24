@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : redistributeques.c                             */
@@ -182,3 +185,6 @@ long ReDistributeQues()
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

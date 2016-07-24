@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : allocvaluepair.c                               */
@@ -46,3 +49,6 @@ void AllocValuePair(long loc0)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

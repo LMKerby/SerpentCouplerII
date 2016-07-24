@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : findrowindexes.c                               */
@@ -165,3 +168,6 @@ void FindRowIndexes(struct ccsMatrix *A)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

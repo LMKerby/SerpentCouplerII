@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : detidx.c                                       */
@@ -112,3 +115,6 @@ long DetIdx(long det, long ebin, long ubin, long cbin, long mbin, long lbin,
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

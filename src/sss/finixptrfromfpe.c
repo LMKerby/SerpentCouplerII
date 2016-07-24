@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : finixptrfromfpe.c                              */
@@ -68,3 +71,6 @@ long FinixPtrFromFpe(long fpe)
   else
     return fib;
 }
+#ifdef __cplusplus 
+} 
+#endif 

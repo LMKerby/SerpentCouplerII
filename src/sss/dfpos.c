@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : dfpos.c                                        */
@@ -1455,3 +1458,6 @@ void DFPos(long surf, double x, double y, double z, long *n1, long *n2,
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

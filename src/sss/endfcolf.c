@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : endfcolf.c                                     */
@@ -87,3 +90,6 @@ double ENDFColF(long col, char *line)
 
 
 
+#ifdef __cplusplus 
+} 
+#endif 

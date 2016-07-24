@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : printinterfaceoutput.c                         */
@@ -561,3 +564,6 @@ void PrintInterfaceOutput()
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

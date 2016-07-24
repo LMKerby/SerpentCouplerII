@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : seekliststr.c                                  */
@@ -49,3 +52,6 @@ long SeekListStr(long ptr, long param, char *str)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

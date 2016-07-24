@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : putcompositions.c                              */
@@ -203,3 +206,6 @@ void PutCompositions()
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

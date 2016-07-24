@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : readstlgeometry.c                              */
@@ -771,3 +774,6 @@ void ReadSTLGeometry()
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

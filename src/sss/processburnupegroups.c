@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : processburnupegroups.c                         */
@@ -36,3 +39,6 @@ void ProcessBurnupEGroups()
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

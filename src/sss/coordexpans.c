@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : coordexpans.c                                  */
@@ -224,3 +227,6 @@ void CoordExpans(long loc0, double *x, double *y, double *z, double t,
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

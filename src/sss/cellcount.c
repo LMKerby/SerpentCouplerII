@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : cellcount.c                                    */
@@ -433,3 +436,6 @@ void CellCount(long uni, long lvl, long recu, long add)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

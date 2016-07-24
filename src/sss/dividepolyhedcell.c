@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : dividepolyhedcell.c                            */
@@ -160,3 +163,6 @@ void DividePolyhedCell(long ifc, long idx, long *sdone)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : processphotoelectric.c                         */
@@ -299,3 +302,6 @@ void ProcessPhotoelectric(long loc0, long nuc) {
 
 
 
+#ifdef __cplusplus 
+} 
+#endif 

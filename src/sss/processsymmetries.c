@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : processsymmetries.c                            */
@@ -132,3 +135,6 @@ void ProcessSymmetries()
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

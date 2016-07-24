@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : writedynsrc.c                                  */
@@ -335,3 +338,6 @@ void WriteDynSrc()
   fprintf(out, "<-- savedynsrc.c\n\n");  
 #endif
 }
+#ifdef __cplusplus 
+} 
+#endif 

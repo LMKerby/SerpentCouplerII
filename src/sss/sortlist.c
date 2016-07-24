@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : sortlist.c                                     */
@@ -386,3 +389,6 @@ void SortList(long lst, long param, long mode)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

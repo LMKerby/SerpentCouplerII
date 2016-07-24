@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : hismean.c                                      */
@@ -142,3 +145,6 @@ double HisMean(long ptr, long cycle, ...)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

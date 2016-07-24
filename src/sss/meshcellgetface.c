@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : meshcellgetface.c                              */
@@ -47,3 +50,6 @@ void MeshCellGetFace(long hex[8], long *face, long facedirection, long celltype)
     face[i] = hex[pos[i]];
 
 }
+#ifdef __cplusplus 
+} 
+#endif 

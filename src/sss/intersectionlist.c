@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : intersectionlist.c                             */
@@ -80,3 +83,6 @@ void IntersectionList(long cell, long *infix, long nparam)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

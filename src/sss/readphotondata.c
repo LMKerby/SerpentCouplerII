@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : readphotondata.c                               */
@@ -153,3 +156,6 @@ void ReadPhotonData()
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : distributefinix.c                              */
@@ -269,3 +272,6 @@ void DistributeFinix()
 #endif
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

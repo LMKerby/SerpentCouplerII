@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : surfacedistance.c                              */
@@ -2774,3 +2777,6 @@ double SurfaceDistance(long surf, const double *params, long type, long np,
 }
 
 /****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

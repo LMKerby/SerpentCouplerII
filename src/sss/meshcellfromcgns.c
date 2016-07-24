@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : meshcellfromcgns.c                             */
@@ -773,3 +776,6 @@ void  MeshCellFromCGNS(long ifc, long cgns, long *V,
  }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

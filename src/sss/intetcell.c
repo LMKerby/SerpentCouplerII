@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : intetcell.c                                    */
@@ -140,3 +143,6 @@ long InTetCell(long ifc, long cgns, double x, double y, double z, long on, long 
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

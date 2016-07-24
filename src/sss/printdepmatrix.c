@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : printdepmatrix.c                               */
@@ -152,3 +155,6 @@ void PrintDepMatrix(long mat, struct ccsMatrix *A, double t, double *N0,
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

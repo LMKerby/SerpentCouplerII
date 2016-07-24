@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : sabscattering.c                                */
@@ -653,3 +656,6 @@ void SabScattering(long rea, double *E, double *u, double *v, double *w,
 /*****************************************************************************/
 
 #endif
+#ifdef __cplusplus 
+} 
+#endif 

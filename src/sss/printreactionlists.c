@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : printreactionclists.c                          */
@@ -286,3 +289,6 @@ void PrintReactionLists()
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

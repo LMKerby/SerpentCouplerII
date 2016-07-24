@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : getbankedprecursors.c                          */
@@ -97,3 +100,6 @@ void GetBankedPrecursors()
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

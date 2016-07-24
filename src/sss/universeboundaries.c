@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : universeboundaries.c                           */
@@ -193,3 +196,6 @@ void UniverseBoundaries()
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

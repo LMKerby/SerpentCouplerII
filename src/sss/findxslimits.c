@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : findxslimits.c                                 */
@@ -96,3 +99,6 @@ long *FindXSLimits(long L0, long NES, double T, double Td, double awr,
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

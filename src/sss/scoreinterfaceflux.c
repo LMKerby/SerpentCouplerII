@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : scoreinterfaceflux.c                           */
@@ -193,3 +196,6 @@ void ScoreInterfaceFlux(double wgt, double flx, double E, double x, double y,
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

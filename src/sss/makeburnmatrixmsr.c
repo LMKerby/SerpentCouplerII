@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : makeburnmatrix.c                               */
@@ -867,3 +870,6 @@ struct ccsMatrix *MakeBurnMatrixMSR(long mat0, double **R, long id)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : movestore.c                                    */
@@ -114,3 +117,6 @@ void MoveStore()
     }
 
 }
+#ifdef __cplusplus 
+} 
+#endif 

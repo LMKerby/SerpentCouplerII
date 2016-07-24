@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : opendatafile.c                                 */
@@ -133,3 +136,6 @@ FILE *OpenDataFile(long ptr, char *type)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

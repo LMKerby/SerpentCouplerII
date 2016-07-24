@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : dividezone.c                                   */
@@ -230,3 +233,6 @@ void DivideZone(long mat, long *idx, long uni, long j)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

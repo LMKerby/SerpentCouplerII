@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 #include "header.h"
 
 /* complex.c: modified 7.6.2014: (MPu) */
@@ -123,3 +126,6 @@ complex c_exp(complex z){
 
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

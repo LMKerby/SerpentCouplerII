@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : writetetmeshtogeo.c                            */
@@ -302,3 +305,6 @@ void WriteTetMeshtoGeo()
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : tostore.c                                      */
@@ -39,3 +42,6 @@ void ToStore(long ptr, long id, long eoi)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

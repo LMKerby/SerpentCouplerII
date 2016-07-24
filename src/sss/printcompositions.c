@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : printcompositions.c                            */
@@ -124,3 +127,6 @@ void PrintCompositions(long step)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

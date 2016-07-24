@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : vrtester.c                                     */
@@ -168,3 +171,6 @@ long VrTester(long part, double x, double y, double z, double u, double v,
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : b1fluxcorr.c                                   */
@@ -81,3 +84,6 @@ double B1FluxCorr(long gcu, double E)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

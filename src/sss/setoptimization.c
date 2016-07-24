@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : setoptimization.c                              */
@@ -422,3 +425,6 @@ void SetOptimization()
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

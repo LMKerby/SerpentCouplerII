@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : normalizecompositions.c                        */
@@ -174,3 +177,6 @@ void NormalizeCompositions()
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

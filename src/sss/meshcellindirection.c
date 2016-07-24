@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : meshcellindirection.c                          */
@@ -300,3 +303,6 @@ void MeshCellIndirection(long *hex, long celltype )
   return;
 
 }
+#ifdef __cplusplus 
+} 
+#endif 

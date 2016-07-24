@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : atomicrelaxation.c                             */
@@ -235,3 +238,6 @@ double AtomicRelaxation(long mat, long rea, long part, long ss0, double x,
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

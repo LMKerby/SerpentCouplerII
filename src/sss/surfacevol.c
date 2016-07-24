@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : surfacevol.c                                   */
@@ -407,3 +410,6 @@ double SurfaceVol(long surf)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

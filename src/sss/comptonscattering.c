@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : comptonscattering.c                            */
@@ -696,3 +699,6 @@ void PartialPivotGauss(double A[3][3], double b[3], double x[3]) {
 
 
 
+#ifdef __cplusplus 
+} 
+#endif 

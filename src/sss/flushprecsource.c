@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : flushprecsource.c                              */
@@ -65,3 +68,6 @@ void FlushPrecSource()
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

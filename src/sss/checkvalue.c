@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : checkvalue.c                                   */
@@ -44,3 +47,6 @@ void CheckValue(char *func, char *param, char *comment, double value,
 #endif
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : hexnewtetface.c                                */
@@ -478,3 +481,6 @@ void HexNewTetFace(long ifc, long cgns, long ncgns, long (*hexnbrs)[6],
 }
 
 
+#ifdef __cplusplus 
+} 
+#endif 

@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : processmixtures.c                              */
@@ -387,3 +390,6 @@ void ProcessMixture(long mat, long recu)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

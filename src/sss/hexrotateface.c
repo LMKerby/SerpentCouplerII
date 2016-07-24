@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : hexrotateface.c                                */
@@ -71,3 +74,6 @@ void HexRotateFace(long *face, long steps, long np)
 	}
     }
 }
+#ifdef __cplusplus 
+} 
+#endif 

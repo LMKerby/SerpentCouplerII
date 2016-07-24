@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : homoflux.c                                     */
@@ -1626,3 +1629,6 @@ void PrintFlx(long gcu, long surf, long nG, long nj, double **surfs_n,
 /*****************************************************************************/
 
 
+#ifdef __cplusplus 
+} 
+#endif 

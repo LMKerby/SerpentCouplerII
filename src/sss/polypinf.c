@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : polypinf.c                                     */
@@ -37,3 +40,6 @@ long PolyPInF(long idx, long *face, long np)
   return NO;
   
 }
+#ifdef __cplusplus 
+} 
+#endif 

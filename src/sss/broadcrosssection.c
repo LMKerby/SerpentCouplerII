@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : broadcrosssection.c                            */
@@ -253,3 +256,6 @@ void BroadCrossSection(long L0, long L1, long NES, double Ti, double Tf,
   Mem(MEM_FREE, xs);
 }
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

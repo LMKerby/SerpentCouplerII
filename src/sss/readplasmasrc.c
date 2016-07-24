@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : readplasmasrc.c                                */
@@ -689,3 +692,6 @@ void ReadPlasmaSrc(long src)
 
   /*****************************************************************************/
 }
+#ifdef __cplusplus 
+} 
+#endif 

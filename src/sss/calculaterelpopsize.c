@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : calculaterelpopsize.c                          */
@@ -340,3 +343,6 @@ void CalculateRelPopSize()
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

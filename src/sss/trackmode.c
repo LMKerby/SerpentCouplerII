@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : trackmode.c                                    */
@@ -92,3 +95,6 @@ long TrackMode(long part, long mat, double E, double totxs, double majorant,
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : writefinixinputfile.c                          */
@@ -123,3 +126,6 @@ void WriteFinixInputFile(long fib, long type)
 }
 
 #endif
+#ifdef __cplusplus 
+} 
+#endif 

@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : icmidx.c                                       */
@@ -297,3 +300,6 @@ long ICMIdx(long surf, double x, double y, double z, double *u0, double *v0,
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

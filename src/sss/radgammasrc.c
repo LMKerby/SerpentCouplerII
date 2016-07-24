@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : radgammasrc.c                                  */
@@ -182,3 +185,6 @@ long RadGammaSrc(long src, long mat, double *E, double *wgt, double vol,
 
   /***************************************************************************/
 }
+#ifdef __cplusplus 
+} 
+#endif 

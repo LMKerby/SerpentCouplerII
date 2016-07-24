@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : ttachain.c                                     */
@@ -61,3 +64,6 @@ double TTAChain(int n, double t, double *l, double *Pout)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

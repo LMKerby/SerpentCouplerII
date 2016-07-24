@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : zdis.c                                         */
@@ -29,3 +32,6 @@ double ZDis(double z, double w, double d)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

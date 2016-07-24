@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : calculatebytes.c                               */
@@ -91,3 +94,6 @@ void CalculateBytes()
 }  
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : setpathlevels.c                                */
@@ -76,3 +79,6 @@ void SetPathLevels(long nuc, long level)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

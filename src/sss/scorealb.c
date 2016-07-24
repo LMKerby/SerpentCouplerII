@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : scorealb.c                                     */
@@ -301,3 +304,6 @@ void ScoreAlb(long part, double x0, double y0, double z0, double u, double v,
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

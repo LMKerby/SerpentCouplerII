@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : writecimomfluxes.c                             */
@@ -106,3 +109,6 @@ void WriteCIMomFluxes(long step)
 
 #endif
 }
+#ifdef __cplusplus 
+} 
+#endif 

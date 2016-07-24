@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : refreshinventory.c                             */
@@ -164,3 +167,6 @@ void RefreshInventory()
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

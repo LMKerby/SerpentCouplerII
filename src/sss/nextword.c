@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : nextword.c                                     */
@@ -61,3 +64,6 @@ long NextWord(char *from, char *to)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

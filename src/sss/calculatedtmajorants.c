@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : calculatedtmajorants.c                         */
@@ -769,3 +772,6 @@ void CalculateDTMajorants0(long mat, double *maj, long erg)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

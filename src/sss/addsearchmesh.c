@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : addsearchmesh.c                                */
@@ -439,3 +442,6 @@ void AddSearchMesh(long msh, long loc0, double xmin, double xmax,
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

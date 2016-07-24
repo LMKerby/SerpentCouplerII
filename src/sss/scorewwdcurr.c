@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : scorewwdcurr.c                                 */
@@ -154,3 +157,6 @@ void ScoreWWDCurr(double x1, double y1, double z1, double u, double v,
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

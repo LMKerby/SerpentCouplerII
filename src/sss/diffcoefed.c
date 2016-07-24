@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : diffcoefed.c                                   */
@@ -349,3 +352,6 @@ void DiffCoefED(long call, double x0, double y0, double z0, double u, double v,
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : pulsedet.c                                     */
@@ -204,3 +207,6 @@ void PulseDet(long part, long mat, double dE, double x0, double y0, double z0,
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

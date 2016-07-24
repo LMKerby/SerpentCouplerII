@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : dfsol.c                                        */
@@ -156,3 +159,6 @@ double *dfSol(long nG, long nJ, double **surfs_n, double *r,
 /*****************************************************************************/
 
 
+#ifdef __cplusplus 
+} 
+#endif 

@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : combinefissionyields.c                         */
@@ -148,3 +151,6 @@ void CombineFissionYields()
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

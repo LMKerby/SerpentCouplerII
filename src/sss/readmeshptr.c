@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : readmeshptr.c                                  */
@@ -55,3 +58,6 @@ long ReadMeshPtr(long msh, long i, long j, long k)
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : makedepletionzones.c                           */
@@ -685,3 +688,6 @@ void MakeDepletionZones(long loc0, long  uni0, long lvl, long recu, long idx0,
 }
 
 /*****************************************************************************/
+#ifdef __cplusplus 
+} 
+#endif 

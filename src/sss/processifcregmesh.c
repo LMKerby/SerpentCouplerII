@@ -1,3 +1,6 @@
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : processifcregmesh.c                            */
@@ -325,3 +328,6 @@ void ProcessIFCRegMesh(long loc0, long update)
   return;
 
 }
+#ifdef __cplusplus 
+} 
+#endif 
