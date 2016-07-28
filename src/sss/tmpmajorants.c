@@ -1,6 +1,6 @@
-#ifdef __cplusplus 
-extern "C" { 
-#endif 
+#ifdef __cplusplus
+extern "C" {
+#endif
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : tmpmajorants.c                                 */
@@ -35,17 +35,17 @@ void TmpMajorants()
   long dum1, dum2;
 #ifdef TRADMAJO
   double ar;
-#else 
-  long iter; 
+#else
+  long iter;
   double v,x, x_old, aux, kT, denom;
 #endif
-  
-  /* Avoid complier warning */ 
-  mino = NULL; 
-  
-  
+
+  /* Avoid complier warning */
+  mino = NULL;
+
+
   fprintf(out, "\nAdjusting majorant temperatures:\n\n");
-  
+
   /* Loop over nuclides */
 
   nuc = (long)RDB[DATA_PTR_NUC0];
@@ -78,20 +78,20 @@ void TmpMajorants()
 	}
       else
 	T1 = RDB[nuc + NUCLIDE_MAJORANT_TEMP];
-      
+
       /* Check if majorant is already at correct temperature */
-      
-      if (T1 == RDB[nuc + NUCLIDE_MAJORANT_TEMP]) 
+
+      if (T1 == RDB[nuc + NUCLIDE_MAJORANT_TEMP])
 	{
 	  /* Pointer to next */
-	  
+
 	  nuc = NextItem(nuc);
-	  
+
 	  /* Cycle loop */
-	  
+
 	  continue;
 	}
-      
+
       /* Check for zero temperature difference */
       /* This happens if Doppler-preprocessor is able to remove all temperature
          differences, i.e. nuclide minimum temperature = nuclide maximum
@@ -102,7 +102,7 @@ void TmpMajorants()
 	  /* Print warning */
 
 	  if ((long)RDB[nuc + NUCLIDE_PTR_SAB] < VALID_PTR)
-	    Note(0, 
+	    Note(0,
 		 "Nuclide %s is adjusted to a single temperature using TMS.\n Consider using Doppler preprocessor instead.", GetText(nuc + NUCLIDE_PTR_NAME));
 
 	  /* Increase majorant temperature artificially by 5 Kelvin to
@@ -110,17 +110,17 @@ void TmpMajorants()
 
 	  WDB[nuc + NUCLIDE_TMS_MAX_TEMP] = T1 + 5.0;
 	  T1 = RDB[nuc + NUCLIDE_TMS_MAX_TEMP];
-	} 
+	}
 
       if ((long)RDB[nuc + NUCLIDE_TYPE_FLAGS] & NUCLIDE_FLAG_DBRC)
 	{
-	  fprintf(out, "Nuclide %10s DBRC majorant to %1.0fK...\n", 
+	  fprintf(out, "Nuclide %10s DBRC majorant to %1.0fK...\n",
 		  GetText(nuc + NUCLIDE_PTR_NAME), T1);
 	  qparam=RDB[DATA_QPARAM_DBRC];
 	}
       else
 	{
-	  fprintf(out, "Nuclide %10s TMS majorant to %1.0fK...\n", 
+	  fprintf(out, "Nuclide %10s TMS majorant to %1.0fK...\n",
 		  GetText(nuc + NUCLIDE_PTR_NAME), T1);
 	  qparam=RDB[DATA_QPARAM_TMS];
 	}
@@ -166,13 +166,11 @@ void TmpMajorants()
       CheckPointer(FUNCTION_NAME, "(ptr)", DATA_ARRAY, ptr);
 
       /* Pointer to cross section array */
-
       ptr = (long)RDB[ptr + REACTION_PTR_XS];
       CheckPointer(FUNCTION_NAME, "(ptr)", DATA_ARRAY, ptr);
       xs1 = &WDB[ptr];
 
       /* Get work arrays for limits amd temporary majorant xs */
-    
       min = WorkArray(DATA_PTR_WORK_GRID1, DATA_ARRAY, ne, 0);
       max = WorkArray(DATA_PTR_WORK_GRID2, DATA_ARRAY, ne, 0);
       tempxs = WorkArray(DATA_PTR_WORK_GRID3, DATA_ARRAY, ne, 0);
@@ -192,26 +190,26 @@ void TmpMajorants()
 	  WDB[nuc + NUCLIDE_MAJORANT_TEMP] = T1;
 
 	  /* Pointer to next nuclide */
-	  
+
 	  nuc = NextItem(nuc);
-	  
+
 	  /* Cycle loop */
-	  
+
 	  continue;
 	}
 
       /***********************************************************************/
-      
+
       /***** Generate limits *************************************************/
 
       /* Get atomic weight ratio */
-      
+
       awr = RDB[nuc + NUCLIDE_AWR];
 
 #ifdef TRADMAJO
 
       /************************************************************************/
-      
+
       /***** Traditional Majorant (Dagan, Becker, Rothenstein et al.) *********/
 
       /* Check that QPARAM is within acceptable limits */
@@ -219,15 +217,15 @@ void TmpMajorants()
       CheckValue(FUNCTION_NAME, "QPARAM", "", qparam, 2.5, 8.0);
 
       /* AWR/kT */
-      
-      ar = awr/(T1 - T0)/KELVIN;	  
+
+      ar = awr/(T1 - T0)/KELVIN;
 
       /* Loop over energy grid */
-      
+
       for (n = 0; n < ne; n++)
 	{
 	  /* Calculate factor */
-	  
+
 	  f = qparam/sqrt(ar*E0[n]);
 
 	  /* Calculate minimum energy */
@@ -236,29 +234,30 @@ void TmpMajorants()
 	    min[n] = E0[0];
 	  else
 	    min[n] = E0[n]*(1.0 - f)*(1.0 - f);
-	      
+
 	  /* Calculate maximum energy */
-	  
+    printf("%d %f 0 \n", n, max[n]);//LMK
+
 	  max[n] = E0[n]*(1.0 + f)*(1.0 + f);
 
 	  /* Check grid boundaries */
-	  
+
 	  if (min[n] < E0[0])
 	    min[n] = E0[0];
 	  if (max[n] > E0[ne - 1])
 	    max[n] = E0[ne - 1];
-	  
+
 	  /* Check */
-	  
+
 	  CheckValue(FUNCTION_NAME, "E", "", E0[n], min[n], max[n]);
 	}
-      
-      /************************************************************************/
-
-#else	  
 
       /************************************************************************/
-      
+
+#else
+
+      /************************************************************************/
+
       /***** Revisited limits *************************************************/
 
       /* Check that QPARAM is within acceptable limits */
@@ -268,165 +267,166 @@ void TmpMajorants()
       kT = (T1-T0)*KELVIN;
 
       /* Loop over energies */
-      
+
 #ifdef OPEN_MP
 #pragma omp parallel for private(v, denom, x, iter, x_old, aux)
-#endif	  
+#endif
       for (n = 0; n < ne; n++)
 	{
 	  /* Lasketaan rajoja vastaavat suhteelliset nopeudet (kertaa gamma) */
 	  /* ja niista edelleen vastaavat energiat */
-	  
+
 	  /*** Init some variables */
-	  
+
 	  /* neutron velocity * gamma */
-	  
+
 	  v = sqrt(E0[n]*awr/kT);
-	  
+
 	  /* The same as "PotCorr" or g-factor, but written for neutron speed */
 	  /* instead of energy */
 
-	  denom = ( (1 + 1/(2*v*v)) * erf(v) + exp(-v*v)/(SQRTPI*v) ) 
+	  denom = ( (1 + 1/(2*v*v)) * erf(v) + exp(-v*v)/(SQRTPI*v) )
 	    * (2*SQRTPI*v*v)*qparam/2;
-	      
+
 	  /************************************/
 	  /*** Solve lower boundary (E_min) ***/
 	  /************************************/
-	  
+
 	  /* Initial guess for solution */
-	  
-	  x = 1.00;	     
-	  	  
+
+	  x = 1.00;
+
 	  /* Solve x using Newton's method */
 	  /* ... joka on toivottavasti riittavan hyva tahan tarkoitukseen */
-	  /* ja toivottavasti suppenee niin kuin pitaakin */ 
+	  /* ja toivottavasti suppenee niin kuin pitaakin */
 
 	  iter = 0;
-	      
+
 	  do
 	    {
 	      x_old = x;
-		
+
 	      /* Nominator : the function */
-	      
+
 	      x = exp(-(v+x_old)*(v+x_old))*(x_old-v)-exp(-(v-x_old)*(v-x_old))*
-		(v+x_old)+2*exp(-v*v)*v+( SQRTPI*v*v +SQRTPI/2 ) * 
+		(v+x_old)+2*exp(-v*v)*v+( SQRTPI*v*v +SQRTPI/2 ) *
 		( erfc(v-x_old) + erfc(v+x_old) -2*erfc(v))-denom;
-	      
+
 	      /* Denominator: the derivative */
-	      
-	      if( (aux = 2*x_old*x_old*(exp(-(v-x_old)*(v-x_old)) 
-					- exp(-(v+x_old)*(v+x_old)))) == 0.0 || 
-		  aux > INFTY){
+
+	      if( fabs((aux = 2*x_old*x_old*(exp(-(v-x_old)*(v-x_old))
+					- exp(-(v+x_old)*(v+x_old))))) < 1.0e-50 ||
+		  aux > INFTY){ /* LMK 7/2016, changed to < 1.0e-50 to avoid NaN crash and be more efficient */
 
 		/* Nuo eksponentit rajahtaa kasiin jos alkuarvaus on kovin    */
 		/* huono, niin kuin tapahtuu isoilla energioilla joilla gridi */
-		/* on harva-> jos nain kay, niin arvataan uudestaan */ 
-		
+		/* on harva-> jos nain kay, niin arvataan uudestaan */
+
 		  x = v;
-		
+
 		  continue;
-	      }				
-	      
+	      }
+
 	      /* Divide nominator by denominator */
-	      
+
 	      x /= aux;
-	      
+
 	      /* Subtract from previous value */
-	      
+
 	      x = x_old - x;
-	      
+
 	      iter++;
-	      
+
 	      if (iter > 1E5)
 		{
 		  Warn(FUNCTION_NAME, "Maximum number of iterations exceeded (Emin loop), Emin = %E, E=%E", x*x*kT/awr, E0[n]);
-		  break; 
+		  break;
 		}
-	      
+
 	      /* Loop until converged (relative difference < 1E-9) */
-	      
-	    } 
+
+	    }
 	  while (fabs(x/x_old-1) > 1E-9);
 
 	  /* 1E-8 naytti olevan riittavasti, mutta pannaan varmuuden vuoksi */
 	  /* 1E-9 */
-	  
+
 	  /* To energy units */
-	  
+
 	  min[n] = x*x*kT/awr;
 
 	  /************************************/
 	  /*** Solve upper boundary (E_max) ***/
 	  /************************************/
-      	  
+
 	  /* Initial guess */
 
 	  x = 1.0;
-	  
+
 	  iter = 0;
-	  
+//    printf("n=%ld \n",n);
+
 	  do
 	    {
 	      x_old = x;
 
 	      /* Nominator : the function */
-	      
+
 	      x = exp(-(v+x_old)*(v+x_old))*(v-x_old)
-		+ exp(-(v-x_old)*(v-x_old))*(v+x_old)+( SQRTPI*v*v +SQRTPI/2 ) 
+		+ exp(-(v-x_old)*(v-x_old))*(v+x_old)+( SQRTPI*v*v +SQRTPI/2 )
 		* ( erf(v-x_old) + erf(v+x_old) )-denom;
-	      
+
 	      /* Denominator: the derivative */
-	      
-	      if( (aux= 2*x_old*x_old*( exp(-(v+x_old)*(v+x_old)) 
-					- exp(-(v-x_old)*(v-x_old)))) == 0.0 ||
+
+	      if( fabs((aux= 2*x_old*x_old*( exp(-(v+x_old)*(v+x_old))
+					- exp(-(v-x_old)*(v-x_old))))) < 1.0e-50 ||
 		  aux > INFTY )
-		{
+		{ /* LMK 7/2016, changed to < 1.0e-50 to avoid NaN crash and be more efficient */
 
 		  /* Nuo eksponentit rajahtaa kasiin jos alkuarvaus on kovin */
 		  /* huono -> jos nain kay, niin arvataan uudestaan */
 
 		  x=v;
-		  
-		  continue;		 
+
+		  continue;
 		}
-	      
+
 	      /* Divide nominator by denominator (Newton)*/
-	      
+
 	      x /= aux;
-	      
+
 	      /* Subtract from previous value (Newton) */
-	      
+
 	      x = x_old - x;
-	      
+//LMK        printf("iter=%ld E_max=%e derivative=%e \n", iter, x, aux);
+
 	      iter++;
-	      
+
 	      if(iter > 1E5)
 		{
 		  Warn(FUNCTION_NAME, "Maximum number of iterations exceeded (Emax loop), Emax = %E, E=%E", x*x*kT/awr, E0[n]);
-		  break; 
+		  break;
 		}
-	      
+
 	      /* Loop until converged */
-	    
-	    } 
+
+	    }
 	  while(fabs(x/x_old-1)>1E-9 );
-	      
+
 	  max[n] = x*x*kT/awr;
-	  
+
 	  /*** A few important checks */
-	  
+
 	  /* Nain voi kayda raskaille ytimille */
-	  
+
 	  if(min[n] < E0[0])
 	    min[n] = E0[0];
-	  
-	  if(min[n] > E0[ne -1])
-	    Die(FUNCTION_NAME, "Emin exceeds the highest point of the energy grid. (min[n] = %E, E = %E, dT = %.1f K)\n", min[n], E0[n], 
-		kT/KELVIN);
-	  
-	  /* Nain tapahtuu usein */
 
+	  if(min[n] > E0[ne -1])
+	    Die(FUNCTION_NAME, "Emin exceeds the highest point of the energy grid. (min[n] = %E, E = %E, dT = %.1f K)\n", min[n], E0[n],
+		kT/KELVIN);
+
+	  /* Nain tapahtuu usein */
 	  if(max[n] > E0[ne -1])
 	    max[n] = E0[ne -1];
 
@@ -439,25 +439,25 @@ void TmpMajorants()
 	  /* HUOM! Kun rajat lasketaan talla tavalla, E_min ei            */
 	  /* valttamatta ole pienempi kuin neutronin energia matalilla    */
 	  /* energioilla */
-	  
+
 	  CheckValue(FUNCTION_NAME, "E_min", "", min[n], E0[0], max[n]);
 	  CheckValue(FUNCTION_NAME, "E_max", "", max[n], E0[n], E0[ne-1]);
 	}
 
-#endif 
-      
+#endif
+
       /***********************************************************************/
-      
+
       /***** Calculate indexes from limit energies ***************************/
-      
+
       /* Calculate indexes for lower limit */
-      
+
       n = 0;
       for (i = 0; i < ne; i++)
 	{
 	  while(E0[n] <= min[i])
 	    n++;
-	  
+
 	  /* Check minimum, maximum and interval */
 
 	  if (n == 0)
@@ -467,11 +467,11 @@ void TmpMajorants()
 	  else
 	    {
 	      /* Check interval */
-	      
+
 	      CheckValue(FUNCTION_NAME, "min", "", min[i], E0[n - 1], E0[n]);
-	      
+
 	      /* Put index */
-	      
+
 	      min[i] = (double)(n - 1) + (min[i]-E0[n-1])/(E0[n]-E0[n-1]);
 	    }
 	}
@@ -483,7 +483,7 @@ void TmpMajorants()
 	{
 	  while(E0[n] < max[i])
 	    n++;
-	  
+
 	  /* Check minimum, maximum and interval */
 
 	  if (n == 0)
@@ -493,7 +493,7 @@ void TmpMajorants()
 	  else
 	    {
 	      /* Check interval */
-	      
+
 	      CheckValue(FUNCTION_NAME, "min", "", max[i], E0[n - 1], E0[n]);
 
 	      /* Put index */
@@ -502,54 +502,54 @@ void TmpMajorants()
 	    }
 	}
 
-      /* If the upper energy limits (Emax) of S(a,b) reactions of a nuclide 
+      /* If the upper energy limits (Emax) of S(a,b) reactions of a nuclide
 	 differ, it has to be taken into account in majorant generation */
-      
+
       /* Find out Emaxlow */
 
-      /* Initialize */ 
-      Emaxlow = 0.0; 
-      
+      /* Initialize */
+      Emaxlow = 0.0;
+
       if( (sab = (long)RDB[nuc + NUCLIDE_PTR_SAB]) > VALID_PTR){
-		  
+
 	while(sab > VALID_PTR){
-	  
+
 	  /* Pointer to S(a,b) nuclide */
-	  
+
 	  iso = (long)RDB[sab + SAB_PTR_ISO];
-	  
+
 	  /* Loop over reactions */
 
 	  rea = (long)RDB[iso + NUCLIDE_PTR_REA];
 
 	  while( rea > VALID_PTR){
-	    
-	    if(( (long)RDB[rea + REACTION_MT] == 1002 || 
+
+	    if(( (long)RDB[rea + REACTION_MT] == 1002 ||
 		 (long)RDB[rea + REACTION_MT] == 1004 ) &&
 	       RDB[rea + REACTION_EMAX] != RDB[nuc + NUCLIDE_SAB_EMAX]){
-	     
+
 	      if(RDB[rea + REACTION_EMAX] < RDB[nuc + NUCLIDE_SAB_EMAX]){
-		
+
 		/* Check that Emaxlow is the same for all temperatures */
 		if(Emaxlow != 0.0 && Emaxlow != RDB[rea + REACTION_EMAX])
-		  Die(FUNCTION_NAME, "Upper E-limits of S(a,b) reactions must be same for different temperatures");		
+		  Die(FUNCTION_NAME, "Upper E-limits of S(a,b) reactions must be same for different temperatures");
 		else
 		  Emaxlow = RDB[rea + REACTION_EMAX];
 	      }
 	      else
-		Die(FUNCTION_NAME, "EMAX of S(a,b) reaction above NUCLIDE_SAB_EMAX");      	      
-	    }	      	    
+		Die(FUNCTION_NAME, "EMAX of S(a,b) reaction above NUCLIDE_SAB_EMAX");
+	    }
 	    rea = NextItem(rea);
-	  }		  	  	  
-	  sab = NextItem(sab); 
-	}	
+	  }
+	  sab = NextItem(sab);
+	}
       }
 
       /* Set Emaxlow of nuclide */
 
       WDB[nuc + NUCLIDE_SAB_EMAXLOW] = Emaxlow;
 
-      /* In OTF S(a,b) mode, get pointer to elastic scattering data 
+      /* In OTF S(a,b) mode, get pointer to elastic scattering data
 	 for subtraction */
 
       if( RDB[nuc + NUCLIDE_PTR_SAB] > VALID_PTR) {
@@ -558,59 +558,58 @@ void TmpMajorants()
 	ptr = (long)RDB[rea2 + REACTION_PTR_XS];
 
 	CheckPointer(FUNCTION_NAME, "(ptr2)", DATA_ARRAY, ptr);
-	ela = &RDB[ptr]; 
-	
+	ela = &RDB[ptr];
+
       }
-    
-      /* OpenMP parallel block */      
+
+      /* OpenMP parallel block */
       /* Loop over energy grid */
 
 #ifdef OPEN_MP
-#pragma omp parallel for private(n, i, f, maj0) 
-#endif	  
+#pragma omp parallel for private(n, i, f, maj0)
+#endif
 	for (n = 0; n < ne; n++)
 	  {
 
 	    maj0 = -1.0;
-	    
-	    /* Loop over interval */    
+
+	    /* Loop over interval */
+
 
 	    for (i = (long)min[n] + 1; i <= (long)max[n]; i++){
 
 	      if(E0[n] < RDB[nuc + NUCLIDE_SAB_EMAX] ){
-		
 		/* Between Emaxlow and Emax, do not subtract elastic scattering from majorant */
 
-		/* Tästä pitää vähentää vielä aktiivisen reaktion minimivaikutusala. 
-		   Tämä tehdään vasta alempana, S(a,b) -majorantin lisäämisen yhteydessä */		   
+		/* Tästä pitää vähentää vielä aktiivisen reaktion minimivaikutusala.
+		   Tämä tehdään vasta alempana, S(a,b) -majorantin lisäämisen yhteydessä */
 
-		if( Emaxlow != 0.0 && E0[n] > Emaxlow ){ 
-
-		  if(xs0[i] > maj0)
-		    maj0 = xs0[i];
+		if( Emaxlow != 0.0 && E0[n] > Emaxlow ){
+		  if(xs0[i] > maj0){
+		    maj0 = xs0[i];}
 		}
-		else { 
-		  if(xs0[i] - ela[i] > maj0)
-		    maj0 = xs0[i] - ela[i];
+		else {
+		  if(xs0[i] - ela[i] > maj0){
+		    maj0 = xs0[i] - ela[i];}
 		}
 
 	      }
-	      else if(xs0[i] > maj0)
-		maj0 = xs0[i];
+	      else if(xs0[i] > maj0){
+		maj0 = xs0[i];}
 	    }
-    
+
 	    /* Check boundary energies by interpolating */
-	    
+
 	    /* Emin */
 
 	    i = (long)min[n];
 	    f = min[n]-(double)i;
-	    
+
 	    /* Get elastic xs for subtraction in the case of OTF S(a,b) */
 
 	    if(E0[n] < RDB[nuc + NUCLIDE_SAB_EMAX])
 	      elaxs = ela[i] + f*(ela[i+1]-ela[i]);
-	    else 
+	    else
 	      elaxs = 0.0;
 
 	    if( xs0[i] + f * ( xs0[i+1]-xs0[i] ) -elaxs > maj0)
@@ -625,7 +624,7 @@ void TmpMajorants()
 
 	    if(E0[n] < RDB[nuc + NUCLIDE_SAB_EMAX])
 	      elaxs = ela[i] + f*(ela[i+1]-ela[i]);
-	    else 
+	    else
 	      elaxs = 0.0;
 
 	    if( xs0[i] + f * ( xs0[i+1]-xs0[i] ) -elaxs > maj0)
@@ -635,118 +634,118 @@ void TmpMajorants()
 
 	    if (!((long)RDB[nuc + NUCLIDE_TYPE_FLAGS] & NUCLIDE_FLAG_DBRC))
 	      maj0 = maj0*PotCorr(nuc, E0[n], T1*KELVIN);
- 
+
 	    /* Check value */
-	    
-	    CheckValue(FUNCTION_NAME, "maj", "", maj0, 0.0, INFTY); 
-	    
+
+	    CheckValue(FUNCTION_NAME, "maj", "", maj0, 0.0, INFTY);
+
 	    /* Put value to temporary array*/
-	    
+
 	    tempxs[n] = maj0;
 	  }
-	
+
 	/**************************************************************************/
-	
+
 	/********* Generate S(a,b) majorants for on-the-fly temperature treatment */
-	
-	/* On-the-fly S(a,b) -nuklideille:    
-	   
+
+	/* On-the-fly S(a,b) -nuklideille:
+
 	   TOTXS pitää sisällään vapaan nuklidin reaktiot ml. vapaan elastisen sironnan.
 	   Edellä poistettiin vapaan nuklidin elastisen osuus tmp-majorantista.
-	   
+
 	   Seuraavassa lasketaan S(a,b)-alueella lämpötilamajorantti nuklidiin liitetyistä
 	   S(a,b) -nuklideista ja lisätään tämä majorantti vanhaan TMP_MAJORANTttiin */
-		
+
 	/* Check if OTF sab data exists */
-	
+
 	if( (sab = (long)RDB[nuc + NUCLIDE_PTR_SAB]) > VALID_PTR){
-	    	  
+
 	  /* Alloc & init temporary array for majorant and minorant */
 
-	  maj = (double *)Mem(MEM_ALLOC, ne, sizeof(double));	  
+	  maj = (double *)Mem(MEM_ALLOC, ne, sizeof(double));
 	  memset(maj, 0.0, ne*sizeof(double));
 
 	  if(Emaxlow > 0.0){
 	    mino = (double *)Mem(MEM_ALLOC, ne, sizeof(double));
 	    memset(mino, 0.0, ne*sizeof(double));
 	  }
-	  
+
 	  sab_Emax = 0.0;
-	  	 
+
 	  /* Calculate temperature majorant by looping over S(a,b) data */
-	  
+
 	  while(sab > VALID_PTR){
-	    
+
 	    iso = (long)RDB[sab + SAB_PTR_ISO];
 	    loc = (long)RDB[iso + NUCLIDE_PTR_TOTXS];
 	    CheckPointer(FUNCTION_NAME, "(totxs1)", DATA_ARRAY, loc);
-	    
+
 	    erg = (long)RDB[loc + REACTION_PTR_EGRID];
 	    E1=&RDB[(long)RDB[erg + ENERGY_GRID_PTR_DATA]];
-	    
+
 	    /* Upper limit for S(a,b) treatment */
-	    
+
 	    sab_Emax = RDB[iso + NUCLIDE_EMAX];
 
 	    /* Pointer to S(a,b) xs data */
-	    
+
 	    ptr = (long)RDB[loc + REACTION_PTR_XS];
-	    sabtot=&WDB[ptr]; 
+	    sabtot=&WDB[ptr];
 
 	    /* Check if energy grids differ (opti modes 1 and 3) */
 
 	    if(ne != (long)RDB[loc + REACTION_XS_NE] ||
 	       i0 != (long)RDB[loc + REACTION_XS_I0]) {
-	      
+
 	      /* Reconstruct totxs of S(a,b) nuclide on a temporary array */
-	      /* (and change sabtot pointer) */ 
-	      
+	      /* (and change sabtot pointer) */
+
 	      sabtot = (double *)Mem(MEM_ALLOC, ne, sizeof(double));
-      	      
+
 	      /* Interpolate */
-	      	      
+
 	      n = InterpolateData(E0, sabtot, ne, E1, &WDB[ptr],
 				  (long)RDB[loc + REACTION_XS_NE], 0, &dum1, &dum2);
-	      
+
 	    }
-	    
+
 	    /* Find maximum total (sum of S(a,b) reactions) cross section */
-	    
-	    for(i=0; i<ne; i++){	      	      
+
+	    for(i=0; i<ne; i++){
 
 	      if(E0[i] > sab_Emax)
 		break;
-	      
+
 	      if(maj[i] <= sabtot[i])
-		maj[i] = sabtot[i]; 
-	      
-	      /* Find also minimum for subtraction */ 
-	      
-	      if(Emaxlow != 0.0){ 
+		maj[i] = sabtot[i];
+
+	      /* Find also minimum for subtraction */
+
+	      if(Emaxlow != 0.0){
 
 		if(mino[i] == 0.0)
-		  mino[i] = sabtot[i]; 
+		  mino[i] = sabtot[i];
 		else if(mino[i] > sabtot[i])
 		  mino[i] = sabtot[i];
 	      }
-	      	      
+
 	    }
-	    
+
 	    /* Free temporary array */
 
 	    if(ne != (long)RDB[loc + REACTION_XS_NE] ||
 	       i0 != (long)RDB[loc + REACTION_XS_I0])
 	      Mem(MEM_FREE, sabtot);
 
-	    
+
 	    sab = NextItem(sab);
 	  }
 
 	  /* Add contribution to majorant, calculated for
 	     total - free_elastic */
-  	  
+
 	  for(i=0; i<ne; i++) {
-	    
+
 	    /* Subtract (minimum) active reaction from majorant */
 
 	    if(Emaxlow != 0.0 && E0[i] > Emaxlow)
@@ -756,23 +755,23 @@ void TmpMajorants()
 	      break;
 
 	    tempxs[i] += maj[i];
-	    
+
 	  }
-	  
+
 	  Mem(MEM_FREE, maj);
 	}
-	  
-	/* Koska majoranttivaikutusaloista kaivataan jatkossa kullekin   
-	   energiavalille ainoastaan kahden valia reunustavan energia-   
-	   gridipisteen maksimiarvoa, voidaan nama maksimit laskea jo      
-	   etukateen. Talla tavalla materiaalimajorantit tulevat   
+
+	/* Koska majoranttivaikutusaloista kaivataan jatkossa kullekin
+	   energiavalille ainoastaan kahden valia reunustavan energia-
+	   gridipisteen maksimiarvoa, voidaan nama maksimit laskea jo
+	   etukateen. Talla tavalla materiaalimajorantit tulevat
 	   oikein lasketuksi ja plussana majoranttia muistista haettaessa
-	   tarvitsee noutaa vain yksi arvo ilman interpolointia. Majorantti on siis  
-	   histogrammityyppia. */ 
-	
+	   tarvitsee noutaa vain yksi arvo ilman interpolointia. Majorantti on siis
+	   histogrammityyppia. */
+
 #ifdef OPEN_MP
-#pragma omp parallel for private(n, i, f, maj0) 
-#endif	  
+#pragma omp parallel for private(n, i, f, maj0)
+#endif
 	for (n = 0; n < ne-1; n++)
 	  {
 	    if(tempxs[n] > tempxs[n+1])
@@ -780,24 +779,24 @@ void TmpMajorants()
 	    else
 	      xs1[n] = tempxs[n+1];
 	  }
-	
+
 	/* Last energy grid point */
-	
+
 	xs1[n]=tempxs[n];
-	
+
 	/* Update majorant temperature */
-	
+
 	WDB[nuc + NUCLIDE_MAJORANT_TEMP] = T1;
-	
-	/*********************************************************************/	
-	
+
+	/*********************************************************************/
+
 	/* Next nuclide */
-	
+
 	nuc = NextItem(nuc);
     }
 }
 
 /*****************************************************************************/
-#ifdef __cplusplus 
-} 
-#endif 
+#ifdef __cplusplus
+}
+#endif

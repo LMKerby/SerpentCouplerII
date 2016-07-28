@@ -676,7 +676,7 @@ extern "C" {
 #define DATA_RESTART_WRITE_PTR_FNAME   1041
 #define DATA_READ_RESTART_FILE         1042
 #define DATA_RESTART_READ_PTR_FNAME    1043
-#define DATA_RESTART_READ_POINT       1044
+#define DATA_RESTART_READ_POINT        1044
 #define DATA_RESTART_READ_IDX          1045
 
 /* Coefficient calculation */

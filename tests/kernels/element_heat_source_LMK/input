@@ -23,7 +23,7 @@ set pop 4000 200 20;
 %set bc 2
 
 %LMK
-%set qparam_tms 1E-4
+%set qparam_tms 1E-6
 
 set power 250000.0
 
