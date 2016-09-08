@@ -823,7 +823,7 @@ extern "C" {
 
 #define DATA_MULTI_LEVEL_GCU           1197
 
-/* LMK added to couple to MOOSE 7/2016 */
+/* LMK, couple to MOOSE 7/2016 */
 /* Running in source code coupled mode (MOOSE) */
 
 #define DATA_EXT_MODE                  1198

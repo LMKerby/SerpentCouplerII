@@ -1,6 +1,6 @@
-#ifdef __cplusplus 
-extern "C" { 
-#endif 
+#ifdef __cplusplus
+extern "C" {
+#endif
 /*****************************************************************************/
 /*                                                                           */
 /* serpent 2 (beta-version) : parsecommandline.c                             */
@@ -360,7 +360,7 @@ long ParseCommandLine(int argc, char **argv)
 	}
 
 #endif
-/* LMK added to couple to MOOSE 7/2016 */
+/* LMK, couple to MOOSE 7/2016 */
 /* Called by external program */
       else if (!strcmp(argv[n], "-ext"))
   {
@@ -521,6 +521,6 @@ long ParseCommandLine(int argc, char **argv)
 }
 
 /*****************************************************************************/
-#ifdef __cplusplus 
-} 
-#endif 
+#ifdef __cplusplus
+}
+#endif

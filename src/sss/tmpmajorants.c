@@ -364,7 +364,6 @@ void TmpMajorants()
 	  x = 1.0;
 
 	  iter = 0;
-//    printf("n=%ld \n",n);
 
 	  do
 	    {
@@ -398,7 +397,6 @@ void TmpMajorants()
 	      /* Subtract from previous value (Newton) */
 
 	      x = x_old - x;
-//LMK        printf("iter=%ld E_max=%e derivative=%e \n", iter, x, aux);
 
 	      iter++;
 
